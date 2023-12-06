@@ -51,6 +51,7 @@ const themeSettings = createTheme({
       color: "#0098EA",
       fontSize: "11px",
       fontWeight: "600",
+      textTransform: "capitalize",
     },
     blue: {
       background: "linear-gradient(180deg, #3EA2FE 0%, #2F99FE 100%)",
@@ -62,6 +63,7 @@ const themeSettings = createTheme({
       color: "white",
       fontSize: "10.89px",
       fontWeight: "600",
+      textTransform: "capitalize",
     },
   },
 });

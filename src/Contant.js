@@ -54,7 +54,7 @@ const PointSystems = [
     fillIconNum: "0",
     text: "Coins for Mini-Games!",
     icon: CoinIcon,
-    url: "/",
+    url: "/shop_earn",
   },
   {
     bgColor:

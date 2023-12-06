@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import Home from "./scenes/home";
 import AnswerSurvey from "./scenes/AnswerSurvey";
+import ShopEarn from "./scenes/ShopEarn";
 
 import themeSettings from "./theme";
 
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/answer_survey" element={<AnswerSurvey />} />
+          <Route exact path="/shop_earn" element={<ShopEarn />} />
         </Routes>
       </ThemeProvider>
     </>

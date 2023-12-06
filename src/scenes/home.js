@@ -249,7 +249,7 @@ const Home = () => {
             justifyContent: "space-between",
             textAlign: "left",
             background:
-              "linear-gradient(82.05deg, #0098EA 5.49%, #0098EA 48.11%, #53BEFE 96.19%), linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+              "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)),linear-gradient(82.05deg, #19A4FF 5.49%, #4992FE 48.57%, #FFF5C2 96.19%)",
             marginBottom: theme.gaps[0],
             position: "relative",
             borderRadius: "17.5px",
