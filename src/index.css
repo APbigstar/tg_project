@@ -20,6 +20,7 @@ code {
     monospace;
 }
 
+
 @font-face {
   font-family: Poppines;
   src: url(./assets/fonts/Poppins/Poppins-Regular.ttf);
@@ -28,3 +29,8 @@ code {
 .poppines_font {
   font-family: Poppines !important;
 }
+
+* {
+  font-family: Poppines;
+}
+

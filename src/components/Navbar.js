@@ -1,10 +1,12 @@
 import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
 import MenuIcon from "../assets/images/menu_icon.svg";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const Navbar = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Box
@@ -22,10 +24,18 @@ const Navbar = () => {
             display: "flex",
             alignItems: "center",
             color: theme.palette.blue[0],
-            fontSize: theme.fontSize.small,
+            fontSize: theme.fontSize.mmedium,
+            fontWeight: theme.fontWeight.thin,
+            cursor: "pointer",
           }}
+          onClick={() => navigate("/")}
         >
-          <ArrowBackIosIcon sx={{ fontSize: theme.fontSize.small }} />
+          <ArrowBackIosIcon
+            sx={{
+              fontSize: theme.fontSize.mmedium,
+              fontWeight: theme.fontWeight.thin,
+            }}
+          />
           {"Back"}
         </Typography>
         <Box>
@@ -34,7 +44,8 @@ const Navbar = () => {
             gutterBottom
             sx={{
               fontWeight: theme.fontWeight.bold,
-              fontSize: theme.fontSize.small,
+              fontSize: theme.fontSize.medium,
+              lineHeight: "16px",
             }}
           >
             TG GAMES
@@ -43,34 +54,15 @@ const Navbar = () => {
             variant="h5"
             gutterBottom
             sx={{
-              opacity: 0.7,
               fontWeight: theme.fontWeight.medium,
-              fontSize: theme.fontSize.small,
+              fontSize: "15px",
+              color: "#9A9A9A",
             }}
           >
             Bot
           </Typography>
         </Box>
         <img src={MenuIcon} alt="Menu Icon" />
-      </Box>
-      <Box
-        sx={{
-          padding: "10px 57px",
-          background: "linear-gradient(90deg, #458CFE 0%, #7DD8FD 100%)",
-        }}
-      >
-        <p
-          className="poppines_font"
-          style={{
-            color: theme.palette.white[0],
-            fontSize: theme.fontSize.small,
-            textAlign: "center",
-            lineHeight: "20px",
-            fontWeight: theme.fontWeight.bold,
-          }}
-        >
-          Hey John_user, welcome to TG Games!
-        </p>
       </Box>
     </React.Fragment>
   );
