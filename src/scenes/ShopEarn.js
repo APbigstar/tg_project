@@ -13,9 +13,13 @@ import CoinsGroup from "../assets/images/coin_group.svg";
 import SSquare from "../assets/images/SmSquare.svg";
 import BSquare from "../assets/images/BigSquare.svg";
 
-const AnswerSurvey = () => {
+import ShopEarnCard from "../components/ShopEarnCard";
+import ShopEarnGift from "../components/ShopEarnGift";
+import { ShopEarnData, ShopEarnGiftData } from "../Contant";
+
+const ShopEarn = (props) => {
   const theme = useTheme();
-  const [selectedButton, setSelectedButton] = useState("deals");
+  const [selectedButton, setSelectedButton] = useState(props.type);
 
   const handleSetSelectedButton = (button) => {
     setSelectedButton(button);
@@ -233,109 +237,160 @@ const AnswerSurvey = () => {
             </p>
           </Box>
         </Box>
-        <Box
-          sx={{
-            width: "100%",
-            padding: "7px 150px 18px 16px",
-            background:
-              "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)),linear-gradient(82.05deg, #19A4FF 5.49%, #4992FE 48.57%, #FFF5C2 96.19%)",
-            borderRadius: "18px",
-            overflow: "hidden",
-            position: "relative",
-          }}
-        >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <p
-              style={{
-                fontSize: "12px",
-                fontWeight: "600",
-                lineHeight: "29px",
-                color: "white",
-                marginRight: "10px",
-                textTransform: "uppercase",
+        {selectedButton === "deals" ? (
+          <>
+            <Box
+              sx={{
+                width: "100%",
+                padding: "7px 150px 18px 16px",
+                background:
+                  "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)),linear-gradient(82.05deg, #19A4FF 5.49%, #4992FE 48.57%, #FFF5C2 96.19%)",
+                borderRadius: "18px",
+                overflow: "hidden",
+                position: "relative",
+                marginBottom: "23px",
               }}
             >
-              Category{" "}
-            </p>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <img style={{ width: "11.93" }} src={Crown} alt="Crown" />
-              <img style={{ width: "10.11" }} src={HalfCrown} alt="Crown" />
-              <img style={{ width: "10.11" }} src={HalfCrown} alt="Crown" />
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <p
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: "600",
+                    lineHeight: "29px",
+                    color: "white",
+                    marginRight: "10px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Category{" "}
+                </p>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <img style={{ width: "11.93" }} src={Crown} alt="Crown" />
+                  <img style={{ width: "10.11" }} src={HalfCrown} alt="Crown" />
+                  <img style={{ width: "10.11" }} src={HalfCrown} alt="Crown" />
+                </Box>
+              </Box>
+              <Box>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontSize: "19px",
+                    lineHeight: "25px",
+                    fontWeight: "700",
+                    color: "white",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Earn coins <br />
+                  while you shop!
+                </p>
+              </Box>
+              <img
+                style={{
+                  position: "absolute",
+                  top: "0",
+                  right: "0",
+                  zIndex: 2,
+                }}
+                src={Sunlight}
+                alt="SunLight"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  right: "0",
+                  zIndex: 3,
+                }}
+                src={CoinsGroup}
+                alt="SunLight"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  opacity: 0.2,
+                  top: "-17px",
+                  right: "160",
+                  zIndex: 1,
+                }}
+                src={SSquare}
+                alt="SunLight"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  opacity: 0.2,
+                  top: "85px",
+                  right: "153px",
+                  zIndex: 1,
+                }}
+                src={SSquare}
+                alt="SunLight"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  opacity: 0.2,
+                  top: "-61px",
+                  right: "53px",
+                  zIndex: 1,
+                }}
+                src={BSquare}
+                alt="SunLight"
+              />
+              <img
+                style={{
+                  position: "absolute",
+                  opacity: 0.2,
+                  top: "-23px",
+                  left: "-71px",
+                  zIndex: 1,
+                }}
+                src={BSquare}
+                alt="SunLight"
+              />
             </Box>
-          </Box>
-          <Box>
-            <p
-              style={{
-                textAlign: "left",
-                fontSize: "19px",
-                lineHeight: "25px",
-                fontWeight: "700",
-                color: "white",
-                textTransform: "uppercase",
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns:
+                  "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)",
+                gap: "7px",
               }}
             >
-              Earn coins <br />
-              while you shop!
-            </p>
+              {ShopEarnData.map((item, index) => (
+                <ShopEarnCard
+                  key={index}
+                  title={item.title}
+                  icon={item.icon}
+                  top={item.top}
+                  left={item.left}
+                  bgColor={item.bgColor}
+                />
+              ))}
+            </Box>
+          </>
+        ) : (
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
+              gap: "10px",
+            }}
+          >
+            {ShopEarnGiftData.map((item, index) => (
+              <ShopEarnGift
+                key={index}
+                icon={item.icon}
+                title={item.title}
+                desc={item.desc}
+              />
+            ))}
           </Box>
-          <img
-            style={{ position: "absolute", top: "0", right: "0", zIndex: 2 }}
-            src={Sunlight}
-            alt="SunLight"
-          />
-          <img
-            style={{ position: "absolute", top: "10px", right: "0", zIndex: 3 }}
-            src={CoinsGroup}
-            alt="SunLight"
-          />
-          <img
-            style={{
-              position: "absolute",
-              opacity: 0.2,
-              top: "-17px",
-              right: "160",
-              zIndex: 1,
-            }}
-            src={SSquare}
-            alt="SunLight"
-          />
-          <img
-            style={{
-              position: "absolute",
-              opacity: 0.2,
-              top: "85px",
-              right: "153px",
-              zIndex: 1,
-            }}
-            src={SSquare}
-            alt="SunLight"
-          />
-          <img
-            style={{
-              position: "absolute",
-              opacity: 0.2,
-              top: "-61px",
-              right: "53px",
-              zIndex: 1,
-            }}
-            src={BSquare}
-            alt="SunLight"
-          />
-          <img
-            style={{
-              position: "absolute",
-              opacity: 0.2,
-              top: "-23px",
-              left: "-71px",
-              zIndex: 1,
-            }}
-            src={BSquare}
-            alt="SunLight"
-          />
-        </Box>
+        )}
       </Box>
     </React.Fragment>
   );
 };
 
-export default AnswerSurvey;
+export default ShopEarn;

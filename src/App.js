@@ -22,7 +22,16 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/answer_survey" element={<AnswerSurvey />} />
-          <Route exact path="/shop_earn" element={<ShopEarn />} />
+          <Route
+            exact
+            path="/shop_earn_deals"
+            element={<ShopEarn type="deals" />}
+          />
+          <Route
+            exact
+            path="/shop_earn_gift"
+            element={<ShopEarn type="gift" />}
+          />
         </Routes>
       </ThemeProvider>
     </>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Box, useTheme, Typography } from "@mui/material";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -1074,6 +1075,7 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
+      {/* <Footer /> */}
     </React.Fragment>
   );
 };
