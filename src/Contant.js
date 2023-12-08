@@ -47,6 +47,22 @@ import FooterIcon32 from "./assets/images/footer_icon_3_2.svg";
 import FooterIcon41 from "./assets/images/footer_icon_4_1.svg";
 import FooterIcon42 from "./assets/images/footer_icon_4_2.svg";
 
+import NFTBG1 from "./assets/images/nft_bg_1.svg";
+import NFTBG2 from "./assets/images/nft_bg_2.svg";
+import NFTBG3 from "./assets/images/nft_bg_3.svg";
+import NFTBG4 from "./assets/images/nft_bg_4.svg";
+import NFTBG5 from "./assets/images/nft_bg_5.svg";
+import NFTBG6 from "./assets/images/nft_bg_6.svg";
+import NFTBG7 from "./assets/images/nft_bg_7.svg";
+import NFTBG8 from "./assets/images/nft_bg_8.svg";
+import NFTIcon1 from "./assets/images/nfg_icon_1.svg";
+import NFTIcon2 from "./assets/images/nfg_icon_2.svg";
+import NFTIcon3 from "./assets/images/nfg_icon_3.svg";
+import NFTIcon4 from "./assets/images/nfg_icon_4.svg";
+import NFTIcon5 from "./assets/images/nfg_icon_5.svg";
+import NFTIcon6 from "./assets/images/nfg_icon_6.svg";
+import NFTIcon7 from "./assets/images/nfg_icon_7.svg";
+
 const PointSystems = [
   {
     bgColor:
@@ -160,6 +176,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(82.05deg, #0098EA 5.49%, #0098EA 48.11%, #53BEFE 96.19%), linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+    url: "/",
   },
   {
     title: "NFT",
@@ -168,6 +185,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(258.65deg, #AA7FF0 1.01%, #7561DB 42.82%, #AA7FF0 89.98%)",
+    url: "/nft_explain",
   },
   {
     title: "E-commerce",
@@ -176,6 +194,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(81.99deg, #4664FF 5.48%, #6D74FB 60.94%, #3875EA 108.65%)",
+    url: "/",
   },
   {
     title: "Sport",
@@ -184,6 +203,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(73.21deg, #13A199 -1.42%, #1DBCB3 48.23%, #21D9D9 100.86%)",
+    url: "/",
   },
   {
     title: "Mode",
@@ -192,6 +212,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(76.96deg, #ECC75F -4.06%, #FFA68A 47.73%, #FFBE85 93.04%)",
+    url: "/",
   },
   {
     title: "Technology",
@@ -200,6 +221,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(248.16deg, #EEACCD 17.14%, #DF77A9 58.26%, #FFC3E0 101.85%)",
+    url: "/",
   },
   {
     title: "Travel",
@@ -208,6 +230,7 @@ const ShopEarnData = [
     left: "0",
     bgColor:
       "linear-gradient(67.71deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%), linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+    url: "/",
   },
 ];
 
@@ -230,4 +253,71 @@ const ShopEarnGiftData = [
   { icon: Callaway, title: "Callaway Gift Card", desc: "$20.00 minimum" },
 ];
 
-export { PointSystems, SurveyData, ShopEarnData, ShopEarnGiftData };
+const NFTData = [
+  {
+    bg: NFTBG1,
+    icon: NFTIcon1,
+    title: "Telegram Usernames",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 1,
+  },
+  {
+    bg: NFTBG2,
+    icon: NFTIcon1,
+    title: "Telegram Virtual Numbers",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 2,
+  },
+  {
+    bg: NFTBG3,
+    icon: NFTIcon2,
+    title: "TON DNS",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 3,
+  },
+  {
+    bg: NFTBG4,
+    icon: NFTIcon3,
+    title: "TON Diamonds",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 4,
+  },
+  {
+    bg: NFTBG5,
+    icon: NFTIcon4,
+    title: "Whales Club",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 5,
+  },
+  {
+    bg: NFTBG6,
+    icon: NFTIcon5,
+    title: "Welcome to @whale",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 6,
+  },
+  {
+    bg: NFTBG7,
+    icon: NFTIcon6,
+    title: "fanton fantasy football",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 7,
+  },
+  {
+    bg: NFTBG8,
+    icon: NFTIcon7,
+    title: "Ton punks",
+    amount: "100",
+    url: "/telegram_explain",
+    index: 8,
+  },
+];
+
+export { PointSystems, SurveyData, ShopEarnData, ShopEarnGiftData, NFTData };

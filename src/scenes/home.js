@@ -195,7 +195,7 @@ const Home = () => {
               amount="2430"
               icon={MoneyCardIcon}
               bgColor="#FFEC83"
-              color="#414646"
+              color="#542700"
               iconColor="linear-gradient(199.44deg, #FFD612 16.3%, #F99C39 86.96%) "
             />
           </Box>

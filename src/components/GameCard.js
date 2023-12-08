@@ -34,7 +34,14 @@ const GameCard = (props) => {
           <Button
             className="poppines_font"
             variant="contained"
-            sx={{ ...theme.buttons.blue }}
+            sx={{
+              ...theme.buttons.blue,
+              boxShadow: "0px 4px 4px 0px #3795FE1F",
+              borderRadius: "31.11px",
+              fontSize: "10.89px",
+              fontWeight: "600",
+              textTransform: "capitalize",
+            }}
           >
             Play
           </Button>

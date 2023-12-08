@@ -1,10 +1,12 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
 import ArrowRight from "../assets/images/rightArrow.svg";
 import SSquare from "../assets/images/SmSquare.svg";
 import BSquare from "../assets/images/BigSquare.svg";
 
 const ShopEarnCard = (props) => {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Box
@@ -14,7 +16,9 @@ const ShopEarnCard = (props) => {
           borderRadius: "17.41px",
           position: "relative",
           overflow: "hidden",
+          cursor: "pointer",
         }}
+        onClick={() => navigate(props.url)}
       >
         <img
           style={{

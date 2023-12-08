@@ -5,6 +5,9 @@ import { ThemeProvider } from "@mui/material/styles";
 import Home from "./scenes/home";
 import AnswerSurvey from "./scenes/AnswerSurvey";
 import ShopEarn from "./scenes/ShopEarn";
+import Tournaments from "./scenes/Tournaments";
+import NFTExplain from "./scenes/NFTExplain";
+import TGExplain from "./scenes/TGExplain";
 
 import themeSettings from "./theme";
 
@@ -22,6 +25,9 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/answer_survey" element={<AnswerSurvey />} />
+          <Route exact path="/tournaments" element={<Tournaments />} />
+          <Route exact path="/nft_explain" element={<NFTExplain />} />
+          <Route exact path="/telegram_explain" element={<TGExplain />} />
           <Route
             exact
             path="/shop_earn_deals"

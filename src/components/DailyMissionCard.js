@@ -41,7 +41,14 @@ const DailyMissionCard = (props) => {
             <Button
               className="poppines_font"
               variant="contained"
-              sx={{ ...theme.buttons.white }}
+              sx={{
+                ...theme.buttons.white,
+                textTransform: "capitalize",
+                fontWeight: "600",
+                fontSize: "11px",
+                borderRadius: "31px",
+                padding: "6.22px, 18.67px, 9.33px, 18.67px",
+              }}
             >
               Play
             </Button>

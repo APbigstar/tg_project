@@ -25,6 +25,7 @@ const MoneyCard = (props) => {
             marginRight: "2px",
             fontSize: theme.fontSize.verySmall,
             fontWeight: theme.fontWeight.bold,
+            color: props.color,
           }}
         >
           {props.amount}

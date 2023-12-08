@@ -46,24 +46,14 @@ const themeSettings = createTheme({
       "&:hover": {
         backgroundColor: "#ffffff",
       },
-      padding: "6.22px, 18.67px, 9.33px, 18.67px",
-      borderRadius: "31px",
       color: "#0098EA",
-      fontSize: "11px",
-      fontWeight: "600",
-      textTransform: "capitalize",
     },
     blue: {
       background: "linear-gradient(180deg, #3EA2FE 0%, #2F99FE 100%)",
       "&:hover": {
         backgroundColor: "#ffffff",
       },
-      boxShadow: "0px 4px 4px 0px #3795FE1F",
-      borderRadius: "31.11px",
       color: "white",
-      fontSize: "10.89px",
-      fontWeight: "600",
-      textTransform: "capitalize",
     },
   },
 });
