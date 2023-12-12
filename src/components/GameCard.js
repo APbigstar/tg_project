@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, useTheme, Button } from "@mui/material";
 import MoneyCard from "../assets/images/money_card_icon.svg";
+import { Link, useNavigate } from "react-router-dom";
 
 const GameCard = (props) => {
   const theme = useTheme();
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Box
@@ -28,7 +30,11 @@ const GameCard = (props) => {
               alignItems: "center",
             }}
           >
-            <img src={props.icon} alt="Icon" style={{ marginRight: "12px" }} />
+            <img
+              src={props.icon}
+              alt="Icon"
+              style={{ marginRight: "12px", borderRadius: "16px" }}
+            />
             <Box>{props.children}</Box>
           </Box>
           <Button
@@ -42,6 +48,7 @@ const GameCard = (props) => {
               fontWeight: "600",
               textTransform: "capitalize",
             }}
+            onClick={() => window.location.assign(props.url)}
           >
             Play
           </Button>

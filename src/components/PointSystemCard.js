@@ -123,12 +123,16 @@ const PointSystemCard = (props) => {
                 justifyContent: "center",
               }}
             >
-              <img src={CrownIcon} style={{ width: "13.3px" }} alt="Crown" />
+              <img
+                src={CrownIcon}
+                style={{ width: "13.3px", height: "11.4px" }}
+                alt="Crown"
+              />
               {props.fillIconNum > 0 &&
                 Array.from({ length: props.fillIconNum }).map((_, index) => (
                   <img
                     key={index}
-                    style={{ width: "11.3px" }}
+                    style={{ width: "11.3px", height: "11.4px" }}
                     src={WhiteCrown}
                     alt="Crown"
                   />
@@ -137,7 +141,7 @@ const PointSystemCard = (props) => {
                 Array.from({ length: props.emptyIconNum }).map((_, index) => (
                   <img
                     key={index}
-                    style={{ width: "11.3px" }}
+                    style={{ width: "11.3px", height: "11.4px" }}
                     src={EmptyCrown}
                     alt="Crown"
                   />

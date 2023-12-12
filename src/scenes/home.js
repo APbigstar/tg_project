@@ -22,10 +22,10 @@ import BSquare from "../assets/images/BigSquare.svg";
 import DSurveyIcon from "../assets/images/DSurveyIcon.svg";
 import DViewRewardIcon from "../assets/images/DViewRewardIcon.svg";
 import DPlaytimeIcon from "../assets/images/DPlaytimeIcon.svg";
-import FGame from "../assets/images/first_game.svg";
-import SGame from "../assets/images/second_game.svg";
-import TGame from "../assets/images/third_game.svg";
-import FOGame from "../assets/images/forth_game.svg";
+import FGame from "../assets/images/hexa.png";
+import SGame from "../assets/images/farm.png";
+import TGame from "../assets/images/ducky.png";
+import FOGame from "../assets/images/hoppy.png";
 import FFGame from "../assets/images/fifth_game.svg";
 import SSGame from "../assets/images/sixth_game.svg";
 import Lock from "../assets/images/Lock.svg";
@@ -537,7 +537,11 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard icon={FGame} amount="0/196">
+            <GameCard
+              icon={FGame}
+              amount="0/196"
+              url="http://51.20.34.211/TG_Games/TG-HexaPuzzle/"
+            >
               <p
                 style={{
                   color: theme.palette.black[0],
@@ -577,7 +581,11 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard icon={SGame} amount="0/196">
+            <GameCard
+              icon={SGame}
+              amount="0/196"
+              url="http://51.20.34.211/TG_Games/TG-FarmLink/"
+            >
               <p
                 style={{
                   color: theme.palette.black[0],
@@ -617,7 +625,11 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard icon={TGame} amount="0/196">
+            <GameCard
+              icon={TGame}
+              amount="0/196"
+              url="http://51.20.34.211/TG_Games/TG-DuckyDuckie/"
+            >
               <p
                 style={{
                   color: theme.palette.black[0],
@@ -657,7 +669,11 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard icon={FOGame} amount="0/196">
+            <GameCard
+              icon={FOGame}
+              amount="0/196"
+              url="http://51.20.34.211/TG_Games/TG-HoppyStacky/"
+            >
               <p
                 style={{
                   color: theme.palette.black[0],
