@@ -34,6 +34,7 @@ const ShopEarn = (props) => {
           paddingLeft: "21px",
           textAlign: "center",
           margin: `${theme.gaps[1]} 0`,
+          marginTop: "14px",
           maxWidth: "354px",
           marginBottom: "8px",
         }}

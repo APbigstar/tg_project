@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
+import TournamentCard from "../components/TournamentCard";
+
 import MoneyCard from "../components/MoneyCard";
 
 import MoneyNCard from "../assets/images/money_game.svg";
@@ -20,6 +22,9 @@ import TTitle from "../assets/images/t_title.svg";
 import BSquare from "../assets/images/BigSquare.svg";
 import SSquare from "../assets/images/SmSquare.svg";
 import MoreBtn from "../assets/images/moreBtn.svg";
+import TournamentCardIcon1 from "../assets/images/tournament_card_icon_1.svg";
+import TournamentCardIcon2 from "../assets/images/tournament_card_icon_2.svg";
+import TournamentCardIcon3 from "../assets/images/tournament_card_icon_3.svg";
 
 const Tournaments = () => {
   const theme = useTheme();
@@ -166,6 +171,7 @@ const Tournaments = () => {
           paddingLeft: "21px",
           textAlign: "center",
           margin: `${theme.gaps[1]} 0`,
+          marginTop: "14px",
           maxWidth: "354px",
         }}
       >
@@ -295,6 +301,7 @@ const Tournaments = () => {
           paddingTop: "12px",
           paddingBottom: "23px",
           overflow: "hidden",
+          marginBottom: "18px",
         }}
       >
         <p
@@ -357,141 +364,199 @@ const Tournaments = () => {
             onClick={() => setMoveRightState(!moveRightState)}
           />
         </Box>
-        <Box sx={{ px: "21px" }}>
-          <Box>
-            <p
+      </Box>
+
+      <Box sx={{ px: "21px", marginBottom: "9px" }}>
+        <Box>
+          <p
+            style={{
+              fontWeight: "600",
+              fontSize: "18px",
+              lineHeight: "24px",
+              color: "rgba(37, 41, 70, 1)",
+              marginBottom: "6px",
+            }}
+          >
+            Popular Tournament
+          </p>
+          <Box
+            sx={{
+              paddingLeft: "28px",
+              paddingBottom: "33px",
+              background:
+                "linear-gradient(145.76deg, #468EFE 0%, #74CCFD 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
+              borderRadius: "45px",
+              overflow: "hidden",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              position: "relative",
+            }}
+          >
+            <img
+              src={TTitle}
+              alt="title"
               style={{
-                fontWeight: "600",
-                fontSize: "18px",
-                lineHeight: "24px",
-                color: "rgba(37, 41, 70, 1)",
-                marginBottom: "6px",
+                position: "absolute",
+                top: "13px",
+                left: "16px",
+                zIndex: 5,
               }}
-            >
-              Popular Tournament
-            </p>
-            <Box
-              sx={{
-                paddingLeft: "28px",
-                paddingBottom: "33px",
-                background:
-                  "linear-gradient(145.76deg, #468EFE 0%, #74CCFD 100%), linear-gradient(0deg, #FFFFFF, #FFFFFF)",
-                borderRadius: "45px",
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "flex-end",
-                justifyContent: "space-between",
-                position: "relative",
+            />
+            <img
+              src={BSquare}
+              alt="Square"
+              style={{
+                position: "absolute",
+                top: "38px",
+                left: "-1px",
+                zIndex: 1,
+                opacity: "30%",
               }}
-            >
-              <img
-                src={TTitle}
-                alt="title"
-                style={{
-                  position: "absolute",
-                  top: "13px",
-                  left: "16px",
-                  zIndex: 5,
+            />
+            <img
+              src={BSquare}
+              alt="Square"
+              style={{
+                position: "absolute",
+                top: "-10px",
+                right: "-30px",
+                zIndex: 1,
+                opacity: "30%",
+              }}
+            />
+            <img
+              src={SSquare}
+              alt="Square"
+              style={{
+                position: "absolute",
+                top: "36px",
+                right: "89px",
+                zIndex: 1,
+                opacity: "30%",
+              }}
+            />
+            <img
+              src={MoreBtn}
+              alt="Square"
+              style={{
+                position: "absolute",
+                top: "308px",
+                right: "29px",
+                zIndex: 4,
+                cursor: "pointer",
+              }}
+            />
+            <Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "space-between",
                 }}
-              />
-              <img
-                src={BSquare}
-                alt="Square"
-                style={{
-                  position: "absolute",
-                  top: "38px",
-                  left: "-1px",
-                  zIndex: 1,
-                  opacity: "30%",
-                }}
-              />
-              <img
-                src={BSquare}
-                alt="Square"
-                style={{
-                  position: "absolute",
-                  top: "-10px",
-                  right: "-30px",
-                  zIndex: 1,
-                  opacity: "30%",
-                }}
-              />
-              <img
-                src={SSquare}
-                alt="Square"
-                style={{
-                  position: "absolute",
-                  top: "36px",
-                  right: "89px",
-                  zIndex: 1,
-                  opacity: "30%",
-                }}
-              />
-              <img
-                src={MoreBtn}
-                alt="Square"
-                style={{
-                  position: "absolute",
-                  top: "308px",
-                  right: "29px",
-                  zIndex: 4,
-                  cursor: "pointer",
-                }}
-              />
-              <Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "flex-end",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <img src={Man1} alt="Avatar" style={{ zIndex: 4 }} />
-                  <img
-                    src={Man2}
-                    style={{ marginLeft: "-10px", zIndex: 3 }}
-                    alt="Avatar"
-                  />
-                  <img
-                    src={Man3}
-                    style={{ marginLeft: "-10px", zIndex: 2 }}
-                    alt="Avatar"
-                  />
-                  <img
-                    src={Man4}
-                    style={{ marginLeft: "-10px", zIndex: 1 }}
-                    alt="Avatar"
-                  />
-                </Box>
-                <p
-                  style={{
-                    fontWeight: "700",
-                    fontSize: "30px",
-                    lineHeight: "45px",
-                    color: "white",
-                  }}
-                >
-                  3.471
-                </p>
-                <p
-                  style={{
-                    color: "white",
-                    fontWeight: "500",
-                    fontSize: "13px",
-                    lineHeight: "19px",
-                  }}
-                >
-                  Online
-                </p>
+              >
+                <img src={Man1} alt="Avatar" style={{ zIndex: 4 }} />
+                <img
+                  src={Man2}
+                  style={{ marginLeft: "-10px", zIndex: 3 }}
+                  alt="Avatar"
+                />
+                <img
+                  src={Man3}
+                  style={{ marginLeft: "-10px", zIndex: 2 }}
+                  alt="Avatar"
+                />
+                <img
+                  src={Man4}
+                  style={{ marginLeft: "-10px", zIndex: 1 }}
+                  alt="Avatar"
+                />
               </Box>
-              <img
-                style={{ marginLeft: "-70px", zIndex: 3 }}
-                src={TMain}
-                alt="T Main"
-              />
+              <p
+                style={{
+                  fontWeight: "700",
+                  fontSize: "30px",
+                  lineHeight: "45px",
+                  color: "white",
+                }}
+              >
+                3.471
+              </p>
+              <p
+                style={{
+                  color: "white",
+                  fontWeight: "500",
+                  fontSize: "13px",
+                  lineHeight: "19px",
+                }}
+              >
+                Online
+              </p>
             </Box>
+            <img
+              style={{ marginLeft: "-70px", zIndex: 3 }}
+              src={TMain}
+              alt="T Main"
+            />
           </Box>
         </Box>
+      </Box>
+      <Box sx={{ px: "21px", marginBottom: "4px", pt: "12px", pb: "13px" }}>
+        <p
+          style={{
+            fontSize: "18px",
+            lineHeight: "24px",
+            color: "rgba(37, 41, 70, 1)",
+            fontWeight: "600",
+            marginBottom: "19px",
+          }}
+        >
+          Friends Are Playing
+        </p>
+        <TournamentCard
+          icon={TournamentCardIcon1}
+          title="Yatzy Royale"
+          buttonColor1="rgba(114, 138, 150, 1)"
+          buttonText1="FUN"
+          buttonColor2="rgba(19, 161, 153, 1)"
+          buttonText2="CASH"
+          buttonColor3="rgba(249, 156, 57, 1)"
+          buttonText3="POINT"
+        />
+        <TournamentCard
+          icon={TournamentCardIcon2}
+          title="Gin Rummy Gold"
+          buttonColor1="rgba(114, 138, 150, 1)"
+          buttonText1="SPORT"
+          buttonColor2="rgba(19, 161, 153, 1)"
+          buttonText2="CASH"
+          buttonColor3="rgba(249, 156, 57, 1)"
+          buttonText3="POINT"
+        />
+        <TournamentCard
+          icon={TournamentCardIcon3}
+          title="Yatzy Royale"
+          buttonColor1="rgba(114, 138, 150, 1)"
+          buttonText1="SPORT"
+          buttonColor2="rgba(19, 161, 153, 1)"
+          buttonText2="CASH"
+          buttonColor3="rgba(249, 156, 57, 1)"
+          buttonText3="POINT"
+        />
+      </Box>
+      <Box>
+        <p
+          style={{
+            fontSize: "18px",
+            fontWeight: "600",
+            lineHeight: "24px",
+            color: "rgba(37, 41, 70, 1)",
+            marginBottom: "22px",
+          }}
+        >
+          Recommended For You
+        </p>
+        <Box></Box>
       </Box>
     </React.Fragment>
   );

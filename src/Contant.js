@@ -62,6 +62,11 @@ import NFTIcon4 from "./assets/images/nfg_icon_4.svg";
 import NFTIcon5 from "./assets/images/nfg_icon_5.svg";
 import NFTIcon6 from "./assets/images/nfg_icon_6.svg";
 import NFTIcon7 from "./assets/images/nfg_icon_7.svg";
+import ODailyIcon from "./assets/images/o_daily_icon.svg";
+import DailyIcon from "./assets/images/daily_icon.svg";
+import CircleChecker from "./assets/images/daily_circle_checker.svg";
+import ChallengeCard1 from "./assets/images/challenge_card_1.svg";
+import ChallengeCard2 from "./assets/images/challenge_card_2.svg";
 
 const PointSystems = [
   {
@@ -320,4 +325,118 @@ const NFTData = [
   },
 ];
 
-export { PointSystems, SurveyData, ShopEarnData, ShopEarnGiftData, NFTData };
+const DailyData = [
+  {
+    day: "Day 1",
+    icon: DailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    passedDate: true,
+  },
+  {
+    day: "Day 2",
+    icon: DailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    passedDate: true,
+  },
+  {
+    day: "Day 3",
+    icon: DailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    selectedDate: true,
+    passedDate: false,
+  },
+  {
+    day: "Day 4",
+    icon: ODailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    passedDate: false,
+  },
+  {
+    day: "Day 5",
+    icon: ODailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    passedDate: false,
+  },
+  {
+    day: "Day 6",
+    icon: ODailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    passedDate: false,
+  },
+  {
+    day: "Day 7",
+    icon: ODailyIcon,
+    checker: CircleChecker,
+    amount: 100,
+    passedDate: false,
+  },
+];
+
+const DailyChallengeData = [
+  {
+    day: "Day 1",
+    icon: ChallengeCard2,
+    checker: CircleChecker,
+    amount: 100,
+    passedChallenge: true,
+  },
+  {
+    day: "Day 2",
+    icon: ChallengeCard2,
+    checker: CircleChecker,
+    amount: 100,
+    passedChallenge: false,
+    selectedDate: true,
+  },
+  {
+    day: "Day 3",
+    icon: ChallengeCard2,
+    checker: CircleChecker,
+    amount: 100,
+    passedChallenge: false,
+  },
+  {
+    day: "Day 4",
+    icon: ChallengeCard1,
+    checker: CircleChecker,
+    amount: 100,
+    passedChallenge: false,
+  },
+  {
+    day: "Day 5",
+    icon: ChallengeCard2,
+    checker: CircleChecker,
+    amount: 100,
+    passedChallenge: false,
+  },
+  {
+    day: "Day 6",
+    icon: ChallengeCard1,
+    checker: CircleChecker,
+    amount: 100,
+    passedChallenge: false,
+  },
+  // {
+  //   day: "Day 7",
+  //   icon: ODailyIcon,
+  //   checker: CircleChecker,
+  //   amount: 100,
+  //   passedChallenge: false,
+  // },
+];
+
+export {
+  PointSystems,
+  SurveyData,
+  ShopEarnData,
+  ShopEarnGiftData,
+  NFTData,
+  DailyData,
+  DailyChallengeData,
+};

@@ -8,6 +8,8 @@ import ShopEarn from "./scenes/ShopEarn";
 import Tournaments from "./scenes/Tournaments";
 import NFTExplain from "./scenes/NFTExplain";
 import TGExplain from "./scenes/TGExplain";
+import MyProfile from "./scenes/MyProfile";
+import Levels from "./scenes/Levels";
 
 import themeSettings from "./theme";
 
@@ -28,6 +30,8 @@ const App = () => {
           <Route exact path="/tournaments" element={<Tournaments />} />
           <Route exact path="/nft_explain" element={<NFTExplain />} />
           <Route exact path="/telegram_explain" element={<TGExplain />} />
+          <Route exact path="/my_profile" element={<MyProfile />} />
+          <Route exact path="/levels" element={<Levels />} />
           <Route
             exact
             path="/shop_earn_deals"

@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 const ShopEarnGift = (props) => {
   return (
     <React.Fragment>
-      <Box>
+      <Box sx={{ background: "rgba(247, 249, 251, 1)", padding: "10px 8px" }}>
         <img src={props.icon} alt="Main" />
         <p
           style={{ fontWeight: "600", fontSize: "12px", lineHeight: "17.46px" }}

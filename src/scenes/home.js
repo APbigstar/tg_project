@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Box, useTheme, Typography } from "@mui/material";
-
-import { Link, useNavigate } from "react-router-dom";
+import { Box, useTheme } from "@mui/material";
 
 import MoneyCard from "../components/MoneyCard";
 import PointSystemCard from "../components/PointSystemCard";
@@ -68,6 +66,7 @@ const Home = () => {
           paddingLeft: "21px",
           textAlign: "center",
           margin: `${theme.gaps[1]} 0`,
+          marginTop: "14px",
           maxWidth: "354px",
         }}
       >
@@ -115,7 +114,6 @@ const Home = () => {
                 position: "absolute",
                 width: "43.75px",
                 height: "43.75px",
-                borderRadius: "64.1",
                 flexShrink: 0,
                 top: "12px",
                 left: "34px",
