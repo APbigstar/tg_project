@@ -67,6 +67,23 @@ import DailyIcon from "./assets/images/daily_icon.svg";
 import CircleChecker from "./assets/images/daily_circle_checker.svg";
 import ChallengeCard1 from "./assets/images/challenge_card_1.svg";
 import ChallengeCard2 from "./assets/images/challenge_card_2.svg";
+import FranceMan from "./assets/images/france_man.png";
+import FranceFlag from "./assets/images/france_flag.png";
+import MorocoMan from "./assets/images/morocco_man.png";
+import MorocoFlag from "./assets/images/morocco_flag.png";
+import GermanyMan from "./assets/images/germany_man.png";
+import GermanyFlag from "./assets/images/germany_flag.png";
+import USAMan from "./assets/images/usa_man.png";
+import USAFlag from "./assets/images/usa_flag.png";
+import QatarMan from "./assets/images/qatar_man.png";
+import QatarFlag from "./assets/images/qatar_flag.png";
+import JapanMan from "./assets/images/japan_man.png";
+import JapanFlag from "./assets/images/japan_flag.png";
+import ChinaMan from "./assets/images/china_man.png";
+import ChinaFlag from "./assets/images/china_flag.png";
+import TGCoin from "./assets/images/tg_coin_card.png";
+import USDTCoin from "./assets/images/usdt_coin_card.png";
+import TetherCoin from "./assets/images/tether_coin_card.png";
 
 const PointSystems = [
   {
@@ -431,6 +448,86 @@ const DailyChallengeData = [
   // },
 ];
 
+const rankingData = [
+  {
+    ranking: 4,
+    username: "Username",
+    country: "France",
+    avatar: FranceMan,
+    flag: FranceFlag,
+    tgCoin: TGCoin,
+    tgAmount: "2000k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "200$",
+  },
+  {
+    ranking: 5,
+    username: "Username",
+    country: "Morocco",
+    avatar: MorocoMan,
+    flag: MorocoFlag,
+    tgCoin: TGCoin,
+    tgAmount: "1900k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "190$",
+  },
+  {
+    ranking: 6,
+    username: "Username",
+    country: "Germany",
+    avatar: GermanyMan,
+    flag: GermanyFlag,
+    tgCoin: TGCoin,
+    tgAmount: "1500k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "150$",
+  },
+  {
+    ranking: 7,
+    username: "Username",
+    country: "USA",
+    avatar: USAMan,
+    flag: USAFlag,
+    tgCoin: TGCoin,
+    tgAmount: "1000k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "100$",
+  },
+  {
+    ranking: 8,
+    username: "Username",
+    country: "Qatar",
+    avatar: QatarMan,
+    flag: QatarFlag,
+    tgCoin: TGCoin,
+    tgAmount: "500k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "50$",
+  },
+  {
+    ranking: 9,
+    username: "Username",
+    country: "Japan",
+    avatar: JapanMan,
+    flag: JapanFlag,
+    tgCoin: TGCoin,
+    tgAmount: "400k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "40$",
+  },
+  {
+    ranking: 10,
+    username: "Username",
+    country: "China",
+    avatar: ChinaMan,
+    flag: ChinaFlag,
+    tgCoin: TGCoin,
+    tgAmount: "190k",
+    usdtCoin: USDTCoin,
+    usdtAmount: "19$",
+  },
+];
+
 export {
   PointSystems,
   SurveyData,
@@ -439,4 +536,5 @@ export {
   NFTData,
   DailyData,
   DailyChallengeData,
+  rankingData,
 };

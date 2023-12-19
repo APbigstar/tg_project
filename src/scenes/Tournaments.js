@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import TournamentCard from "../components/TournamentCard";
 
@@ -29,6 +30,7 @@ import TournamentCardIcon3 from "../assets/images/tournament_card_icon_3.svg";
 const Tournaments = () => {
   const theme = useTheme();
   const [moveRightState, setMoveRightState] = React.useState(false);
+  const navigate = useNavigate();
 
   return (
     <React.Fragment>
@@ -446,6 +448,7 @@ const Tournaments = () => {
                 zIndex: 4,
                 cursor: "pointer",
               }}
+              onClick={() => navigate("/tournaments_detail")}
             />
             <Box>
               <Box
