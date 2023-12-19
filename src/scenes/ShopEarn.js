@@ -3,7 +3,7 @@ import { Box, useTheme, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import MoneyCard from "../components/MoneyCard";
 import ProfileIcon from "../assets/images/profile.png";
-import Flag from "../assets/images/Flag.svg";
+import Flag from "../assets/images/France_Flag.svg";
 import MoneyIcon from "../assets/images/money_icon.svg";
 import MoneyCardIcon from "../assets/images/money_card_icon.svg";
 import Crown from "../assets/images/Crown.svg";
@@ -83,7 +83,6 @@ const ShopEarn = (props) => {
                 position: "absolute",
                 width: "43.75px",
                 height: "43.75px",
-                borderRadius: "64.1",
                 flexShrink: 0,
                 top: "12px",
                 left: "34px",
@@ -196,11 +195,11 @@ const ShopEarn = (props) => {
           <Box
             sx={{
               width: "50%",
-              padding: "4px 38px 4px 38px",
               borderRadius: "20px",
               background:
                 selectedButton === "deals" ? "rgba(0, 152, 234, 1)" : "unset",
               cursor: "pointer",
+              padding: "4px",
             }}
             onClick={() => handleSetSelectedButton("deals")}
           >
@@ -210,6 +209,7 @@ const ShopEarn = (props) => {
                   selectedButton === "deals"
                     ? "white"
                     : "rgba(117, 117, 122, 1)",
+                fontSize: "12px",
               }}
             >
               Deals
@@ -218,11 +218,11 @@ const ShopEarn = (props) => {
           <Box
             sx={{
               width: "50%",
-              padding: "4px 38px 4px 38px",
               borderRadius: "20px",
               background:
                 selectedButton === "gift" ? "rgba(0, 152, 234, 1)" : "unset",
               cursor: "pointer",
+              padding: "4px",
             }}
             onClick={() => handleSetSelectedButton("gift")}
           >
@@ -232,6 +232,7 @@ const ShopEarn = (props) => {
                   selectedButton === "gift"
                     ? "white"
                     : "rgba(117, 117, 122, 1)",
+                fontSize: "12px",
               }}
             >
               Gift-cards

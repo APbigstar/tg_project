@@ -57,6 +57,7 @@ const DailyChallenge = (props) => {
               border:
                 !props.selectedDate && "0.5px solid rgba(215, 215, 215, 1)",
               color: !props.selectedDate && "rgba(176, 176, 176, 1)",
+              textTransform: "capitalize",
             }}
           >
             Claim

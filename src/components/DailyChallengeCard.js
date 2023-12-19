@@ -161,7 +161,7 @@ const DailyChallengeCard = (props) => {
                 color: props.buttonTextColor,
                 padding: "6px 19px",
                 borderRadius: "31.11px",
-                textTransform: "none",
+                textTransform: "capitalize",
                 boxShadow: "none",
                 fontWeight: "600",
                 "&:hover": {

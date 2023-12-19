@@ -8,7 +8,7 @@ import MoneyCard from "../components/MoneyCard";
 import MoneyNCard from "../assets/images/money_game.svg";
 import Moneys from "../assets/images/moneys.svg";
 import ProfileIcon from "../assets/images/profile.png";
-import Flag from "../assets/images/Flag.svg";
+import Flag from "../assets/images/France_Flag.svg";
 import ZIcon from "../assets/images/zIcon.svg";
 import TImg1 from "../assets/images/t_img1.svg";
 import TImg2 from "../assets/images/t_img2.svg";

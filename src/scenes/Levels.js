@@ -5,7 +5,7 @@ import MoneyCard from "../components/MoneyCard";
 import LevelCard from "../components/LevelCard";
 
 import ProfileIcon from "../assets/images/profile.png";
-import Flag from "../assets/images/Flag.svg";
+import Flag from "../assets/images/France_Flag.svg";
 import MoneyIcon from "../assets/images/money_icon.svg";
 import MoneyCardIcon from "../assets/images/money_card_icon.svg";
 import Lock from "../assets/images/Lock.svg";

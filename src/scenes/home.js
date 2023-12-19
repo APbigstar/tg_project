@@ -9,7 +9,7 @@ import DailyMissionCard from "../components/DailyMissionCard";
 import GameCard from "../components/GameCard";
 
 import ProfileIcon from "../assets/images/profile.png";
-import Flag from "../assets/images/Flag.svg";
+import Flag from "../assets/images/France_Flag.svg";
 import MoneyIcon from "../assets/images/money_icon.svg";
 import MoneyCardIcon from "../assets/images/money_card_icon.svg";
 

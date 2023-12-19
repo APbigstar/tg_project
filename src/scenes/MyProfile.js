@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, useTheme, Button } from "@mui/material";
 import Navbar from "../components/Navbar";
 import DailyChecker from "../components/DailyChecker";
@@ -8,7 +9,7 @@ import DailyChallengeCard from "../components/DailyChallengeCard";
 import WonProfileBg from "../assets/images/won_profile_bg.svg";
 import BProfileIcon from "../assets/images/BProfileIcon.svg";
 import PenIcon from "../assets/images/pen_icon.svg";
-import Flag from "../assets/images/Flag.svg";
+import Flag from "../assets/images/France_Flag.svg";
 import Man1 from "../assets/images/man1.svg";
 import Man2 from "../assets/images/man2.svg";
 import Man3 from "../assets/images/man3.svg";
@@ -36,6 +37,7 @@ import { DailyData, DailyChallengeData } from "../Contant";
 
 const MyProfile = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
     <React.Fragment>
@@ -90,8 +92,14 @@ const MyProfile = () => {
             />
             <img
               src={PenIcon}
-              style={{ position: "absolute", bottom: "-53px", left: "62%" }}
+              style={{
+                position: "absolute",
+                bottom: "-53px",
+                left: "62%",
+                cursor: "pointer",
+              }}
               alt="Pen Icon"
+              onClick={() => navigate("/edit_profile")}
             />
           </Box>
         </Box>
@@ -444,7 +452,9 @@ const MyProfile = () => {
                   fontSize: "12px",
                   color: "white !important",
                   width: "50%",
+                  textTransform: "capitalize",
                 }}
+                onClick={() => navigate("/deposit")}
               >
                 Deposit
               </Button>
@@ -468,6 +478,7 @@ const MyProfile = () => {
                   color: "white !important",
                   letterSpacing: "-0.5px",
                   width: "50%",
+                  textTransform: "capitalize",
                 }}
               >
                 Withdraw Prize
@@ -485,6 +496,7 @@ const MyProfile = () => {
                 color: "rgba(0, 152, 234, 1)",
                 letterSpacing: "-0.5px",
                 marginBottom: "20px",
+                textTransform: "none",
               }}
             >
               Redeem Points for Cash
