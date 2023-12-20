@@ -528,6 +528,64 @@ const rankingData = [
   },
 ];
 
+const recordData = [
+  {
+    record: "VS",
+    username: "Username",
+    country: "France",
+    avatar: FranceMan,
+    flag: FranceFlag,
+    state: "WIN",
+    stateColor: "#0098EA",
+    usdtCoin: USDTCoin,
+    usdtAmount: "$800",
+  },
+  {
+    record: "VS",
+    username: "Username",
+    country: "Morocco",
+    avatar: MorocoMan,
+    flag: MorocoFlag,
+    state: "Lose",
+    stateColor: "#FF6359",
+    usdtCoin: USDTCoin,
+    usdtAmount: "190$",
+  },
+  {
+    record: "VS",
+    username: "Username",
+    country: "Germany",
+    avatar: GermanyMan,
+    flag: GermanyFlag,
+    state: "Lose",
+    stateColor: "#FF6359",
+    usdtCoin: USDTCoin,
+    usdtAmount: "150$",
+  },
+  {
+    record: "VS",
+    username: "Username",
+    country: "USA",
+    avatar: USAMan,
+    flag: USAFlag,
+    state: "WIN",
+    stateColor: "#0098EA",
+    usdtCoin: USDTCoin,
+    usdtAmount: "100$",
+  },
+  {
+    record: "VS",
+    username: "Username",
+    country: "Qatar",
+    avatar: QatarMan,
+    flag: QatarFlag,
+    state: "WIN",
+    stateColor: "#0098EA",
+    usdtCoin: USDTCoin,
+    usdtAmount: "50$",
+  },
+];
+
 export {
   PointSystems,
   SurveyData,
@@ -537,4 +595,5 @@ export {
   DailyData,
   DailyChallengeData,
   rankingData,
+  recordData,
 };

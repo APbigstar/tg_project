@@ -12,7 +12,7 @@ const TournamentFooter = (props) => {
       <Box
         sx={{
           padding: "16px",
-          display: "flex",
+          display: props.choosePrize ? "none" : "flex",
           justifyContent: "center",
           alignItems: "center",
           gap: "16px",
@@ -34,7 +34,9 @@ const TournamentFooter = (props) => {
             alignItems: "center",
             gap: "4px",
             boxShadow: "0px 2px 20px 0px #B5E2FA",
+            cursor: "pointer",
           }}
+          onClick={props.handleChoosePrize}
         >
           <img src={TFooterIcon1} alt="Footer Icon" />
           Play and win cash

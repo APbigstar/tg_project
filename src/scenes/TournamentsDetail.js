@@ -2,6 +2,7 @@ import React from "react";
 import { Box, useTheme, Button } from "@mui/material";
 import Navbar from "../components/Navbar";
 import TournamentFooter from "../components/TournamentFooter";
+import PrizeCard from "../components/PrizeCard";
 
 import TMainIcon from "../assets/images/t_main_2.png";
 import TSub from "../assets/images/t_sub.svg";
@@ -22,20 +23,41 @@ import SecondTower from "../assets/images/2st_tower.png";
 import FirstTower from "../assets/images/1st_tower.png";
 import ThirdTower from "../assets/images/3st_tower.png";
 import USDTCard from "../assets/images/usdt_coin_card.png";
+import TGCoinCard from "../assets/images/tg_coin_card.png";
+import TetherCard from "../assets/images/tether_coin_card.png";
+import NFTCard from "../assets/images/nft_coin_card.png";
 import RankingCardIcon from "../assets/images/ranking_card.png";
 import FranceMan from "../assets/images/france_man.png";
 import MoneyIcon from "../assets/images/group_money.png";
+import WonPrizeIcon from "../assets/images/won_prize_card.png";
+import PMoneyIcon from "../assets/images/p_money.svg";
+import PNFTIcon from "../assets/images/p_nft.svg";
+import PStarIcon from "../assets/images/p_star.svg";
+import PTonIcon from "../assets/images/p_ton.svg";
+import CupIcon from "../assets/images/cup.svg";
+import WinIcon from "../assets/images/check.svg";
+import FailIcon from "../assets/images/cross.svg";
+import WinnerAvatar from "../assets/images/winner_avatar.png";
+import LoserAvatar from "../assets/images/loser_avatar.png";
+import EmptyCircle from "../assets/images/empty_circle.png";
+import CloseIcon from "../assets/images/close.svg";
 
-import { rankingData } from "../Contant";
+import { rankingData, recordData } from "../Contant";
 import RankingCard from "../components/RankingCard";
 
 const TournamentsDetail = () => {
   const theme = useTheme();
   const [moveRightState, setMoveRightState] = React.useState(false);
   const [selectedButton, setselectedButton] = React.useState("detail");
+  const [choosePrize, setChoosePrize] = React.useState(false);
+
+  const handleChoosePrize = () => {
+    setselectedButton("ranking");
+    setChoosePrize(true);
+  };
 
   return (
-    <React.Fragment>
+    <Box sx={{ position: "relative" }}>
       <Navbar />
       <Box sx={{ px: "21px" }}>
         <Box
@@ -317,7 +339,7 @@ const TournamentsDetail = () => {
         ) : selectedButton === "ranking" ? (
           <Box
             sx={{
-              pt: "145px",
+              pt: choosePrize ? "29px" : "145px",
               px: "21px",
               background:
                 "linear-gradient(180deg, #FFF 2.51%, #0098EA 37.22%, #0098EA 76.27%, #FFF 97.43%)",
@@ -334,6 +356,7 @@ const TournamentsDetail = () => {
                 py: "9px",
                 background: "white",
                 borderRadius: "24px",
+                display: choosePrize ? "none" : "block",
               }}
             >
               <Box
@@ -593,7 +616,7 @@ const TournamentsDetail = () => {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: choosePrize ? "none" : "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -617,13 +640,549 @@ const TournamentsDetail = () => {
             </Box>
           </Box>
         ) : (
-          <Box>
-            <h1>Record</h1>
+          <Box
+            sx={{
+              pt: "339px",
+              px: "21px",
+              background:
+                "linear-gradient(180deg, #FFF 2.51%, #0098EA 37.22%, #0098EA 76.27%, #FFF 97.43%)",
+              position: "relative",
+            }}
+          >
+            <Box
+              sx={{
+                width: "334px",
+                position: "absolute",
+                top: "0",
+                left: "50%",
+                transform: "translate(-50%, 0%)",
+                py: "9px",
+                background: "white",
+                borderRadius: "24px",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "15px",
+                  marginBottom: "10px",
+                }}
+              >
+                <img src={WonPrizeIcon} alt="Ranking card" />
+                <p
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: "600",
+                    lineHeight: "24px",
+                    color: "#252946",
+                  }}
+                >
+                  Won Prize
+                </p>
+              </Box>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
+                }}
+              >
+                <Box
+                  sx={{
+                    padding: "21px",
+                    // borderRight: "1px solid #BABABC",
+                  }}
+                >
+                  <img
+                    src={PMoneyIcon}
+                    alt="Money Icon"
+                    style={{ marginBottom: "5.5px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "24px",
+                      fontWeight: "600",
+                      lineHeight: "24px",
+                      color: "#252946",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    $1000
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "12px",
+                      color: "#75757A",
+                    }}
+                  >
+                    USD
+                  </p>
+                </Box>
+                <Box
+                  sx={{
+                    padding: "21px",
+                    // borderBottom: "1px solid #BABABC",
+                  }}
+                >
+                  <img
+                    src={PTonIcon}
+                    alt="Money Icon"
+                    style={{ marginBottom: "5.5px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "24px",
+                      fontWeight: "600",
+                      lineHeight: "24px",
+                      color: "#252946",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    6,000
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "12px",
+                      color: "#75757A",
+                    }}
+                  >
+                    Toncoin
+                  </p>
+                </Box>
+                <Box
+                  sx={{
+                    padding: "21px",
+                    // borderTop: "1px solid #BABABC",
+                  }}
+                >
+                  <img
+                    src={PStarIcon}
+                    alt="Money Icon"
+                    style={{ marginBottom: "5.5px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "24px",
+                      fontWeight: "600",
+                      lineHeight: "24px",
+                      color: "#252946",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    10,009
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "12px",
+                      color: "#75757A",
+                    }}
+                  >
+                    Point
+                  </p>
+                </Box>
+                <Box
+                  sx={{
+                    padding: "21px",
+                    // borderLeft: "1px solid #BABABC",
+                  }}
+                >
+                  <img
+                    src={PNFTIcon}
+                    alt="Money Icon"
+                    style={{ marginBottom: "5.5px" }}
+                  />
+                  <p
+                    style={{
+                      fontSize: "24px",
+                      fontWeight: "600",
+                      lineHeight: "24px",
+                      color: "#252946",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    25
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "12px",
+                      lineHeight: "12px",
+                      color: "#75757A",
+                    }}
+                  >
+                    NFTs
+                  </p>
+                </Box>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                marginBottom: "14px",
+                padding: "8px",
+                borderRadius: "24px",
+                background: "white",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "5px",
+                  marginBottom: "10px",
+                  marginLeft: "-28px",
+                }}
+              >
+                <img src={CupIcon} alt="Cup Icon" />
+                <p
+                  style={{
+                    textTransform: "uppercase",
+                    fontSize: "15px",
+                    fontWeight: "600",
+                    lineHeight: "24px",
+                  }}
+                >
+                  WINS
+                </p>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  sx={{
+                    padding: "16px 27px 9px",
+                    borderRight: "1px solid #BABABC",
+                  }}
+                >
+                  <p
+                    style={{
+                      color: "#0098EA",
+                      fontSize: "30px",
+                      fontWeight: "600",
+                      lineHeight: "24px",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    100
+                  </p>
+                  <p
+                    style={{
+                      color: "#75757A",
+                      fontSize: "12px",
+                      lineHeight: "14px",
+                    }}
+                  >
+                    Matches Won
+                  </p>
+                </Box>
+                <Box
+                  sx={{
+                    padding: "16px 27px 9px",
+                  }}
+                >
+                  <p
+                    style={{
+                      color: "#0098EA",
+                      fontSize: "30px",
+                      fontWeight: "600",
+                      lineHeight: "24px",
+                      marginBottom: "4px",
+                    }}
+                  >
+                    50
+                  </p>
+                  <p
+                    style={{
+                      color: "#75757A",
+                      fontSize: "12px",
+                      lineHeight: "14px",
+                    }}
+                  >
+                    Winning Streak
+                  </p>
+                </Box>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                gap: "12px",
+                borderRadius: "24px",
+                background: "#F7F9FB",
+                padding: "13px 17px",
+              }}
+            >
+              <Box
+                sx={{
+                  pt: "4px",
+                  pl: "8px",
+                  background: "white",
+                  width: "100%",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#252946",
+                    fontSize: "15px",
+                    fontWeight: "600",
+                    lineHeight: "24px",
+                    textAlign: "left",
+                  }}
+                >
+                  Win
+                </p>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                    justifyContent: "space-between",
+                    marginTop: "-21px",
+                  }}
+                >
+                  <img src={WinIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={WinIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={WinIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={WinIcon} alt="Icon" />
+                  <img src={WinIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={WinnerAvatar} alt="Icon" />
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  pt: "4px",
+                  pl: "8px",
+                  background: "white",
+                  width: "100%",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#252946",
+                    fontSize: "15px",
+                    fontWeight: "600",
+                    lineHeight: "24px",
+                    textAlign: "left",
+                  }}
+                >
+                  Win
+                </p>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                    justifyContent: "space-between",
+                    marginTop: "-21px",
+                  }}
+                >
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={FailIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={FailIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={FailIcon} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={EmptyCircle} alt="Icon" />
+                  <img src={FailIcon} alt="Icon" />
+                  <img src={FailIcon} alt="Icon" />
+                  <img src={LoserAvatar} alt="Icon" />
+                </Box>
+              </Box>
+              {recordData.map((item, index) => (
+                <RankingCard
+                  key={index}
+                  avatar={item.avatar}
+                  title={item.record}
+                  username={item.username}
+                  flag={item.flag}
+                  country={item.country}
+                  title_2={item.state}
+                  color={item.stateColor}
+                  coinIcon={item.usdtCoin}
+                  amount={item.usdtAmount}
+                />
+              ))}
+            </Box>
           </Box>
         )}
       </Box>
-      <TournamentFooter />
-    </React.Fragment>
+      <Box
+        sx={{
+          position: "absolute",
+          display: choosePrize ? "flex" : "none",
+          width: "100%",
+          height: "100vh",
+          background: moveRightState ? "rgba(0, 0, 0, 0.44)" : "unset",
+          bottom: "-67px",
+          left: "0",
+          transition: "all 0.4s",
+          alignItems: "flex-end",
+          justifyContent: "center",
+          zIndex: 99,
+          overflow: "hidden",
+        }}
+      >
+        <Box
+          sx={{
+            padding: "12px 21px 39px",
+            position: "relative",
+            background: "white",
+            width: "100%",
+            borderTopRightRadius: "10px",
+            borderTopLeftRadius: "10px",
+          }}
+        >
+          <img
+            style={{
+              position: "absolute",
+              top: "12px",
+              right: "16px",
+              cursor: "pointer",
+            }}
+            src={CloseIcon}
+            alt="Close Icon"
+            onClick={() => setChoosePrize(false)}
+          />
+          <Box
+            sx={{
+              marginBottom: "23px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "5px",
+            }}
+          >
+            <img src={CupIcon} alt="Cup Icon" />
+            <p
+              style={{
+                fontSize: "15px",
+                fontWeight: "600",
+                lineHeight: "24px",
+                color: "#252946",
+              }}
+            >
+              Choose Your Prize
+            </p>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              width: "1000.73px",
+              paddingRight: !moveRightState ? 0 : "21px",
+              marginLeft: moveRightState ? "-463px" : "unset",
+              transition: "all 0.7s",
+              gap: "12.68px",
+            }}
+          >
+            <PrizeCard
+              title={"WIN CASH"}
+              fontColor={"#13A199"}
+              bgColor={
+                "linear-gradient(82deg, #13A199 5.49%, #15B4AB 48.11%, #13C4BA 96.19%)"
+              }
+              amount={"4.8"}
+              coin={"$"}
+              currency={"USD"}
+              coinIcon={USDTCard}
+              coinAmount={"3"}
+              setMoveRightState={setMoveRightState}
+              moveRightState={moveRightState}
+            />
+            <PrizeCard
+              title={"WIN POINT"}
+              fontColor={"#F99C39"}
+              bgColor={
+                "linear-gradient(82deg, #F99C39 5.49%, #FFAF5A 48.11%, #FFA443 96.19%)"
+              }
+              amount={"80"}
+              coin={""}
+              currency={""}
+              coinIcon={TGCoinCard}
+              coinAmount={"50"}
+              setMoveRightState={setMoveRightState}
+              moveRightState={moveRightState}
+            />
+            <PrizeCard
+              title={"WIN TONCOIN"}
+              fontColor={"#4B52D8"}
+              bgColor={
+                "linear-gradient(82deg, #3C42C2 5.49%, #4E56D9 48.11%, #4951E1 96.19%)"
+              }
+              amount={"80"}
+              coin={""}
+              currency={""}
+              coinIcon={TetherCard}
+              coinAmount={"50"}
+              setMoveRightState={setMoveRightState}
+              moveRightState={moveRightState}
+            />
+            <PrizeCard
+              title={"WIN POINT"}
+              fontColor={"#F99C39"}
+              bgColor={
+                "linear-gradient(82deg, #F99C39 5.49%, #FFAF5A 48.11%, #FFA443 96.19%)"
+              }
+              amount={"80"}
+              coin={""}
+              currency={""}
+              coinIcon={TGCoinCard}
+              coinAmount={"50"}
+              setMoveRightState={setMoveRightState}
+              moveRightState={moveRightState}
+            />
+            <PrizeCard
+              title={"WIN TONCOIN"}
+              fontColor={"#4B52D8"}
+              bgColor={
+                "linear-gradient(82deg, #3C42C2 5.49%, #4E56D9 48.11%, #4951E1 96.19%)"
+              }
+              amount={"80"}
+              coin={""}
+              currency={""}
+              coinIcon={TetherCard}
+              coinAmount={"50"}
+              setMoveRightState={setMoveRightState}
+              moveRightState={moveRightState}
+            />
+            <PrizeCard
+              title={"WIN NFT"}
+              fontColor={"#0098EA"}
+              bgColor={
+                "linear-gradient(82deg, #0098EA 5.49%, #2BB5FF 48.11%, #50C0FC 96.19%)"
+              }
+              amount={"25"}
+              coin={""}
+              currency={""}
+              coinIcon={NFTCard}
+              coinAmount={"50"}
+              setMoveRightState={setMoveRightState}
+              moveRightState={moveRightState}
+            />
+          </Box>
+        </Box>
+      </Box>
+      <TournamentFooter
+        handleChoosePrize={handleChoosePrize}
+        choosePrize={choosePrize}
+      />
+    </Box>
   );
 };
 

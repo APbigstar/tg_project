@@ -16,8 +16,7 @@ const RankingCard = (props) => {
           borderRadius: "7px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "center",
-          gap: "46px",
+          justifyContent: "space-around",
         }}
       >
         <Box
@@ -71,24 +70,33 @@ const RankingCard = (props) => {
         </Box>
         <Box
           sx={{
+            flex: 1,
             display: "flex",
             alignItems: "center",
-            justifyContent: "flex-start",
+            gap: "6.41px",
+            justifyContent: "flex-end",
+            // marginLeft: props.type === "ranking" ? "46px" : "26px",
+          }}
+        >
+          {props.tg_coin && <img src={props.tg_coin} alt="Coin Icon" />}
+          <p
+            style={{
+              fontSize: "11.5px",
+              color: props?.type === "ranking" ? "#252946" : props.color,
+            }}
+          >
+            {props.title_2}
+          </p>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: props.type === "ranking" ? "center" : "flex-end",
             gap: "14px",
             flex: 1,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", gap: "6.41px" }}>
-            {props.tg_coin && <img src={props.tg_coin} alt="Coin Icon" />}
-            <p
-              style={{
-                fontSize: "11.5px",
-                color: props?.type === "ranking" ? "#252946" : "#0098EA",
-              }}
-            >
-              {props.title_2}
-            </p>
-          </Box>
           <Box sx={{ display: "flex", alignItems: "center", gap: "6.41px" }}>
             <img src={props.coinIcon} alt="Coin Icon" />
             <p
