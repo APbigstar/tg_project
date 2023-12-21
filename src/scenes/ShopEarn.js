@@ -9,7 +9,7 @@ import MoneyCardIcon from "../assets/images/money_card_icon.svg";
 import Crown from "../assets/images/Crown.svg";
 import HalfCrown from "../assets/images/HalfCrown.svg";
 import Sunlight from "../assets/images/sunlight.svg";
-import CoinsGroup from "../assets/images/coin_group.svg";
+import CoinsGroup from "../assets/images/coin_group.png";
 import SSquare from "../assets/images/SmSquare.svg";
 import BSquare from "../assets/images/BigSquare.svg";
 

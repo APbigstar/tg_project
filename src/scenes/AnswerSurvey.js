@@ -2,7 +2,7 @@ import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Surveys from "../assets/images/Surveys.svg";
-import Coins from "../assets/images/coins.svg";
+import Coins from "../assets/images/coins.png";
 import GameController from "../assets/images/gameController.svg";
 import { SurveyData } from "../Contant";
 import SurveyCard from "../components/SurveyCard";

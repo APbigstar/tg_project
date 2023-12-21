@@ -18,7 +18,7 @@ import Sunlight from "../assets/images/sunlight.svg";
 import SSquare from "../assets/images/SmSquare.svg";
 import BSquare from "../assets/images/BigSquare.svg";
 import DSurveyIcon from "../assets/images/DSurveyIcon.svg";
-import DViewRewardIcon from "../assets/images/DViewRewardIcon.svg";
+import DViewRewardIcon from "../assets/images/DViewRewardIcon.png";
 import DPlaytimeIcon from "../assets/images/DPlaytimeIcon.svg";
 import FGame from "../assets/images/hexa.png";
 import SGame from "../assets/images/farm.png";

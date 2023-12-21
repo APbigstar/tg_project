@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, useTheme, Button } from "@mui/material";
 
-import Man1 from "../assets/images/man1.svg";
-import Man2 from "../assets/images/man2.svg";
-import Man3 from "../assets/images/man3.svg";
+import Man1 from "../assets/images/man1.png";
+import Man2 from "../assets/images/man2.png";
+import Man3 from "../assets/images/man3.png";
 import Man4 from "../assets/images/man4.svg";
 import ArrowRight from "../assets/images/blue_right_arrow.svg";
 

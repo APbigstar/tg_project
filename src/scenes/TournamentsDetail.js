@@ -6,11 +6,11 @@ import PrizeCard from "../components/PrizeCard";
 
 import TMainIcon from "../assets/images/t_main_2.png";
 import TSub from "../assets/images/t_sub.svg";
-import Man1 from "../assets/images/man2.svg";
-import Man2 from "../assets/images/man3.svg";
-import Female1 from "../assets/images/female1.svg";
-import Preview1 from "../assets/images/t_preview_1.svg";
-import Preview2 from "../assets/images/t_preview_2.svg";
+import Man1 from "../assets/images/man2.png";
+import Man2 from "../assets/images/man3.png";
+import Female1 from "../assets/images/female1.png";
+import Preview1 from "../assets/images/t_preview_1.png";
+import Preview2 from "../assets/images/t_preview_2.png";
 import Preview3 from "../assets/images/t_preview_3.svg";
 
 import SecondMan from "../assets/images/2st_man.png";

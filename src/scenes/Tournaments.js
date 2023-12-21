@@ -6,8 +6,8 @@ import TournamentCard from "../components/TournamentCard";
 
 import MoneyCard from "../components/MoneyCard";
 
-import MoneyNCard from "../assets/images/money_game.svg";
-import Moneys from "../assets/images/moneys.svg";
+import MoneyNCard from "../assets/images/money_game.png";
+import Moneys from "../assets/images/moneys.png";
 import ProfileIcon from "../assets/images/profile.png";
 import Flag from "../assets/images/France_Flag.svg";
 import ZIcon from "../assets/images/zIcon.svg";
@@ -15,9 +15,9 @@ import TImg1 from "../assets/images/t_img1.svg";
 import TImg2 from "../assets/images/t_img2.svg";
 import TImg3 from "../assets/images/t_img3.svg";
 import TMain from "../assets/images/t_main.svg";
-import Man1 from "../assets/images/man1.svg";
-import Man2 from "../assets/images/man2.svg";
-import Man3 from "../assets/images/man3.svg";
+import Man1 from "../assets/images/man1.png";
+import Man2 from "../assets/images/man2.png";
+import Man3 from "../assets/images/man3.png";
 import Man4 from "../assets/images/man4.svg";
 import TTitle from "../assets/images/t_title.svg";
 import BSquare from "../assets/images/BigSquare.svg";
