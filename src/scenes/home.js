@@ -956,7 +956,7 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ padding: "0 21px", marginBottom: "17px" }}>
+      <Box sx={{ padding: "0 21px" }}>
         <Box sx={{ padding: "0px 3px 7px" }}>
           <h3 style={{ color: "#252946", fontSize: "18px" }}>Tournaments</h3>
           <p
@@ -977,6 +977,46 @@ const Home = () => {
               position: "relative",
             }}
           >
+            <img
+              style={{
+                position: "absolute",
+                top: "-35px",
+                left: "207px",
+                opacity: 0.3,
+              }}
+              src={BSquare}
+              alt="Img"
+            />
+            <img
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                opacity: 0.3,
+              }}
+              src={BSquare}
+              alt="Img"
+            />
+            <img
+              style={{
+                position: "absolute",
+                top: "137px",
+                left: "200px",
+                opacity: 0.3,
+              }}
+              src={SSquare}
+              alt="Img"
+            />
+            <img
+              style={{
+                position: "absolute",
+                top: "11px",
+                left: "175px",
+                opacity: 0.3,
+              }}
+              src={SSquare}
+              alt="Img"
+            />
             <img
               style={{
                 position: "absolute",
@@ -1089,7 +1129,7 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
-      {/* <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 };

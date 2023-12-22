@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import MoneyCard from "../components/MoneyCard";
 import ProfileIcon from "../assets/images/profile.png";
 import Flag from "../assets/images/France_Flag.svg";
@@ -392,6 +393,7 @@ const ShopEarn = (props) => {
           </Box>
         )}
       </Box>
+      {selectedButton === "deals" && <Footer />}
     </React.Fragment>
   );
 };

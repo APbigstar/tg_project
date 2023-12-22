@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import Footer1 from "../assets/images/footer_1.svg";
 import Footer2 from "../assets/images/footer_2.svg";
 import Footer3 from "../assets/images/footer_3.svg";
@@ -14,8 +15,13 @@ import FooterIcon41 from "../assets/images/footer_icon_4_1.svg";
 import FooterIcon42 from "../assets/images/footer_icon_4_2.svg";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const [currentFooter, setCurrentFooter] = React.useState(1);
-  const handleChangeFooter = (num) => setCurrentFooter(num);
+  const handleChangeFooter = (num, redirectUrl) => {
+    setCurrentFooter(num);
+    navigate(redirectUrl);
+  };
   return (
     <React.Fragment>
       <Box
@@ -24,6 +30,7 @@ const Footer = () => {
           position: "sticky",
           bottom: "-8px",
           background: Footer1,
+          zIndex: "99",
         }}
       >
         <img
@@ -59,22 +66,26 @@ const Footer = () => {
           <img
             src={currentFooter === 1 ? FooterIcon12 : FooterIcon11}
             alt="Footer Icon"
-            onClick={() => handleChangeFooter(1)}
+            onClick={() => handleChangeFooter(1, "/")}
+            style={{ cursor: "pointer" }}
           />
           <img
             src={currentFooter === 2 ? FooterIcon22 : FooterIcon21}
             alt="Footer Icon"
-            onClick={() => handleChangeFooter(2)}
+            onClick={() => handleChangeFooter(2, "/tournaments")}
+            style={{ cursor: "pointer" }}
           />
           <img
             src={currentFooter === 3 ? FooterIcon32 : FooterIcon31}
             alt="Footer Icon"
-            onClick={() => handleChangeFooter(3)}
+            onClick={() => handleChangeFooter(3, "/shop_earn_deals")}
+            style={{ cursor: "pointer" }}
           />
           <img
             src={currentFooter === 4 ? FooterIcon42 : FooterIcon41}
             alt="Footer Icon"
-            onClick={() => handleChangeFooter(4)}
+            onClick={() => handleChangeFooter(4, "/my_profile")}
+            style={{ cursor: "pointer" }}
           />
         </Box>
       </Box>

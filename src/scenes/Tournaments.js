@@ -2,6 +2,8 @@ import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 import TournamentCard from "../components/TournamentCard";
 
 import MoneyCard from "../components/MoneyCard";
@@ -561,6 +563,7 @@ const Tournaments = () => {
         </p>
         <Box></Box>
       </Box>
+      <Footer />
     </React.Fragment>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, useTheme, Button } from "@mui/material";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import DailyChecker from "../components/DailyChecker";
 import DailyChallenge from "../components/DailyChallenge";
 import DailyChallengeCard from "../components/DailyChallengeCard";
@@ -34,6 +35,7 @@ import BlueCardIcon from "../assets/images/daily_blue_challenge_card_icon.svg";
 import YelloCardIcon from "../assets/images/daily_yellow_challenge_card_icon.svg";
 
 import { DailyData, DailyChallengeData } from "../Contant";
+import { FortTwoTone } from "@mui/icons-material";
 
 const MyProfile = () => {
   const theme = useTheme();
@@ -42,7 +44,7 @@ const MyProfile = () => {
   return (
     <React.Fragment>
       <Navbar />
-      <Box sx={{ padding: "20px" }}>
+      <Box sx={{ padding: "20px 20px 0 20px" }}>
         <Box sx={{ position: "relative", marginBottom: "58px" }}>
           <img src={WonProfileBg} alt="bg" />
           <Box sx={{ position: "relative" }}>
@@ -252,7 +254,7 @@ const MyProfile = () => {
             <img src={GoOver} alt="Go Over Icon" />
           </Box>
         </Box>
-        <Box sx={{ padding: "8px 0px 23px" }}>
+        <Box sx={{ padding: "8px 0px 0px" }}>
           <Box
             sx={{
               background: "rgba(247, 249, 251, 1)",
@@ -817,6 +819,7 @@ const MyProfile = () => {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </React.Fragment>
   );
 };
