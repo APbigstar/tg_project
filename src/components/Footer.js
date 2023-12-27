@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setFooterState } from "../features/footer/footer";
+
 import Footer1 from "../assets/images/footer_1.svg";
 import Footer2 from "../assets/images/footer_2.svg";
 import Footer3 from "../assets/images/footer_3.svg";
@@ -15,11 +18,13 @@ import FooterIcon41 from "../assets/images/footer_icon_4_1.svg";
 import FooterIcon42 from "../assets/images/footer_icon_4_2.svg";
 
 const Footer = () => {
+  const currentFooter = useSelector((state) => state.footerState.value);
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
-  const [currentFooter, setCurrentFooter] = React.useState(1);
   const handleChangeFooter = (num, redirectUrl) => {
-    setCurrentFooter(num);
+    dispatch(setFooterState(num));
     navigate(redirectUrl);
   };
   return (

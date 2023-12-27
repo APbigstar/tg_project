@@ -35,7 +35,7 @@ const Deposit = () => {
   return (
     <Box sx={{ position: "relative" }}>
       <Navbar />
-      <Box sx={{ px: "21px" }}>
+      <Box sx={{ px: "21px", height: "100vh" }}>
         <Box
           sx={{
             display: "flex",
