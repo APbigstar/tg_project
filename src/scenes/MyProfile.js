@@ -17,12 +17,14 @@ import Man3 from "../assets/images/man3.png";
 import Man4 from "../assets/images/man4.svg";
 import GoOver from "../assets/images/go_over_icon.svg";
 import Gift from "../assets/images/gift.svg";
-import Prize from "../assets/images/prize.svg";
+import Prize from "../assets/images/prize.png";
 import BSquare from "../assets/images/BigSquare.svg";
 import SSquare from "../assets/images/SmSquare.svg";
-import Money from "../assets/images/p_money.svg";
-import Star from "../assets/images/p_star.svg";
-import Ton from "../assets/images/p_ton.svg";
+
+import Money from "../assets/images/p_money.png";
+import Star from "../assets/images/p_star.png";
+import Ton from "../assets/images/p_ton.png";
+
 import Deposit from "../assets/images/deposit.svg";
 import Withdraw from "../assets/images/withdraw.svg";
 import Redeem from "../assets/images/redeem.svg";
@@ -163,8 +165,9 @@ const MyProfile = () => {
           <img
             style={{
               position: "absolute",
-              bottom: "0px",
-              right: "0",
+              width: "161px",
+              bottom: "-23px",
+              right: "-27px",
               zIndex: 2,
             }}
             src={Prize}

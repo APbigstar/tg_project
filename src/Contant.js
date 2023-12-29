@@ -1,9 +1,9 @@
-import ReferFriendIcon from "./assets/images/ReferIcon.svg";
-import DailySpinIcon from "./assets/images/DailySpinIcon.svg";
-import SurveryIcon from "./assets/images/SurveyIcon.svg";
-import WatchVideoIcon from "./assets/images/WatchVideoIcon.svg";
-import CoinIcon from "./assets/images/CoinsIcon.svg";
-import RedeemIcon from "./assets/images/RedeemIcon.svg";
+import ReferFriendIcon from "./assets/images/ReferIcon.png";
+import DailySpinIcon from "./assets/images/DailySpinIcon.png";
+import SurveryIcon from "./assets/images/SurveyIcon.png";
+import WatchVideoIcon from "./assets/images/WatchVideoIcon.png";
+import CoinIcon from "./assets/images/CoinsIcon.png";
+import RedeemIcon from "./assets/images/RedeemIcon.png";
 import CPX from "./assets/images/cpx_research.svg";
 import Bitlabs from "./assets/images/bitlabs.svg";
 import TabResearch from "./assets/images/tabResearch.svg";
@@ -97,6 +97,9 @@ const PointSystems = [
     text: "Refer your Friends",
     icon: ReferFriendIcon,
     url: "/",
+    width: "126px",
+    left: "-42px",
+    top: "-53px",
   },
   {
     bgColor:
@@ -107,6 +110,9 @@ const PointSystems = [
     text: "Daily Spin",
     icon: DailySpinIcon,
     url: "/",
+    width: "116px",
+    left: "-29px",
+    top: "-60px",
   },
   {
     bgColor:
@@ -117,6 +123,9 @@ const PointSystems = [
     text: "Answer Surveys",
     icon: SurveryIcon,
     url: "/answer_survey",
+    width: "111px",
+    top: "-53px",
+    left: "-29px",
   },
   {
     bgColor:
@@ -127,6 +136,9 @@ const PointSystems = [
     text: "Watch a video Available",
     icon: WatchVideoIcon,
     url: "/",
+    width: "103px",
+    left: "-40px",
+    top: "-50px",
   },
   {
     bgColor:
@@ -137,6 +149,9 @@ const PointSystems = [
     text: "Shop to Earn!",
     icon: CoinIcon,
     url: "/shop_earn_deals",
+    width: "110px",
+    top: "-47px",
+    left: "-41px",
   },
   {
     bgColor:
@@ -147,6 +162,9 @@ const PointSystems = [
     text: "Redeem with Merchants",
     icon: RedeemIcon,
     url: "/shop_earn_gift",
+    width: "103px",
+    top: "-43px",
+    left: "-30px",
   },
 ];
 
@@ -251,7 +269,7 @@ const ShopEarnData = [
     title: "Travel",
     icon: Travel,
     top: "50px",
-    left: "0",
+    left: "-30px",
     bgColor:
       "linear-gradient(68deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%)",
     url: "/",
@@ -268,7 +286,7 @@ const ShopEarnData = [
   {
     title: "Fashion",
     icon: Fashion,
-    top: "19px",
+    top: "39px",
     left: "0",
     bgColor:
       "linear-gradient(254deg, #A7F7B4 18.9%, #67DE7A 56.86%, #78C885 97.11%)",

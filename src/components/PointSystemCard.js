@@ -16,7 +16,7 @@ const PointSystemCard = (props) => {
   const handleClickEvent = (url) => {
     props.setMoveRightState(!props.currentMoveRightState);
     navigate(url);
-  }
+  };
   return (
     <React.Fragment>
       <Box
@@ -179,19 +179,9 @@ const PointSystemCard = (props) => {
             <img
               style={{
                 position: "absolute",
-                left: "-11px",
-                top:
-                  props.text === "Refer your Friends"
-                    ? "-39px"
-                    : props.text === "Daily Spin"
-                    ? "-47px"
-                    : props.text === "Answer Surveys"
-                    ? "-61px"
-                    : props.text === "Coins for Mini-Games!"
-                    ? "-49px"
-                    : props.text === "Redeem with Merchants"
-                    ? "-30px"
-                    : "-47px",
+                width: props.width,
+                left: props?.left,
+                top: props?.top,
               }}
               src={props.icon}
               alt="Main Icon"

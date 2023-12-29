@@ -231,6 +231,9 @@ const Home = () => {
               text={item.text}
               icon={item.icon}
               redirectUrl={item.url}
+              width={item.width}
+              left={item.left}
+              top={item.top}
             />
           ))}
         </Box>
@@ -808,7 +811,7 @@ const Home = () => {
                 gap: "8px",
                 marginBottom: "21px",
                 position: "relative",
-                cursor: "pointer"
+                cursor: "pointer",
               }}
               onClick={() => navigate("/levels")}
             >
@@ -1041,7 +1044,7 @@ const Home = () => {
                 margin: "auto",
               }}
             >
-              Unlock on <br/> level 7
+              Unlock on <br /> level 7
             </p>
             <Box
               sx={{
