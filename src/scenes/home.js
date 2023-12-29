@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Box, useTheme } from "@mui/material";
@@ -35,6 +36,7 @@ import { PointSystems } from "../Contant";
 
 const Home = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   const [moveRightState, setMoveRightState] = useState(false);
 
@@ -43,7 +45,7 @@ const Home = () => {
       <Navbar />
       <Box
         sx={{
-          padding: "10px 57px",
+          py: "10px",
           background: "linear-gradient(90deg, #458CFE 0%, #7DD8FD 100%)",
         }}
       >
@@ -353,14 +355,14 @@ const Home = () => {
             <Box
               sx={{
                 background: "linear-gradient(180deg, #FFD703 0%, #FFC704 100%)",
-                padding: "6px 18px",
+                padding: "6.22px 18.67px",
                 borderRadius: "32px",
                 boxShadow: "0px 4px 4px 0px #A85C0A52",
               }}
             >
               <p
                 style={{
-                  fontSize: "10.89",
+                  fontSize: "10.89px",
                   fontWeight: theme.fontWeight.bold,
                   lineHeight: "15.56px",
                 }}
@@ -806,7 +808,9 @@ const Home = () => {
                 gap: "8px",
                 marginBottom: "21px",
                 position: "relative",
+                cursor: "pointer"
               }}
+              onClick={() => navigate("/levels")}
             >
               <img
                 style={{
@@ -1037,7 +1041,7 @@ const Home = () => {
                 margin: "auto",
               }}
             >
-              Unlock on level 7
+              Unlock on <br/> level 7
             </p>
             <Box
               sx={{

@@ -170,7 +170,7 @@ const ShopEarn = (props) => {
         </Box>
       </Box>
       <Box sx={{ width: "100%", padding: "0 21px", textAlign: "center" }}>
-        <Box sx={{ marginBottom: "20px" }}>
+        <Box sx={{ my: "20px" }}>
           <p
             style={{
               lineHeight: "24px",

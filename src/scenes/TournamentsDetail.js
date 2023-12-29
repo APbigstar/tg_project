@@ -41,6 +41,9 @@ import WinnerAvatar from "../assets/images/winner_avatar.png";
 import LoserAvatar from "../assets/images/loser_avatar.png";
 import EmptyCircle from "../assets/images/empty_circle.png";
 import CloseIcon from "../assets/images/close.svg";
+import MoreBtn from "../assets/images/moreBtn.svg";
+import BSquare from "../assets/images/BigSquare.svg";
+import SSquare from "../assets/images/SmSquare.svg";
 
 import { rankingData, recordData } from "../Contant";
 import RankingCard from "../components/RankingCard";
@@ -1028,7 +1031,8 @@ const TournamentsDetail = () => {
           display: choosePrize ? "flex" : "none",
           width: "100%",
           height: "100vh",
-          background: moveRightState ? "rgba(0, 0, 0, 0.44)" : "unset",
+          // background: moveRightState ? "rgba(0, 0, 0, 0.44)" : "unset",
+          background: "rgba(0, 0, 0, 0.44)",
           bottom: "-67px",
           left: "0",
           transition: "all 0.4s",
@@ -1061,7 +1065,7 @@ const TournamentsDetail = () => {
           />
           <Box
             sx={{
-              marginBottom: "23px",
+              marginBottom: "14px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -1077,10 +1081,151 @@ const TournamentsDetail = () => {
                 color: "#252946",
               }}
             >
-              Choose Your Prize
+              Play with Points
             </p>
           </Box>
           <Box
+            sx={{
+              padding: "22px 26px 22px 20px",
+              borderRadius: "22.458px",
+              background: "linear-gradient(79deg, #F99C39 0%, #FF8606 100%)",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              style={{
+                position: "absolute",
+                opacity: "0.3",
+                left: "-23px",
+                top: "-44px",
+              }}
+              src={BSquare}
+              alt="Icon"
+            />
+            <img
+              style={{
+                position: "absolute",
+                opacity: "0.3",
+                right: "-6px",
+                top: "-84px",
+              }}
+              src={BSquare}
+              alt="Icon"
+            />
+            <img
+              style={{
+                position: "absolute",
+                opacity: "0.3",
+                right: "112px",
+                top: "-40px",
+              }}
+              src={SSquare}
+              alt="Icon"
+            />
+            <img
+              style={{
+                position: "absolute",
+                opacity: "0.3",
+                right: "84px",
+                top: "81px",
+              }}
+              src={SSquare}
+              alt="Icon"
+            />
+
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "space-between",
+                marginBottom: "22px",
+              }}
+            >
+              <p
+                style={{
+                  color: "white",
+                  fontSize: "47px",
+                  fontWeight: "600",
+                  lineHeight: "18.466px",
+                }}
+              >
+                80
+              </p>
+              <Box
+                sx={{
+                  background: "rgba(255, 255, 255, 0.07)",
+                  borderRadius: "7.486px",
+                  padding: "3.743px 7.09px 3.743px 7.386px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "11.229px",
+                    fontWeight: "600",
+                    lineHeight: "16.844px",
+                  }}
+                >
+                  Point
+                </p>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "11px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "white",
+                    fontSize: "13.834px",
+                    fontWeight: "400",
+                    lineHeight: "23.057px",
+                  }}
+                >
+                  Entry
+                </p>
+                <Box
+                  sx={{
+                    padding: "3.5px",
+                    borderRadius: "5.764px",
+                    boxShadow:
+                      "0px 3.376px 3.376px 0px rgba(21, 173, 255, 0.10)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "3px",
+                    background: "white",
+                  }}
+                >
+                  <p
+                    style={{
+                      color: "#F99C39",
+                      fontSize: "11.817px",
+                      fontWeight: "500",
+                      lineHeight: "16.881px",
+                    }}
+                  >
+                    50
+                  </p>
+                  <img src={TGCoinCard} alt="Icon" />
+                </Box>
+              </Box>
+              <img style={{ width: "31.13px" }} src={MoreBtn} alt="Icon" />
+            </Box>
+          </Box>
+          {/* <Box
             sx={{
               display: "flex",
               alignItems: "center",
@@ -1175,7 +1320,7 @@ const TournamentsDetail = () => {
               setMoveRightState={setMoveRightState}
               moveRightState={moveRightState}
             />
-          </Box>
+          </Box> */}
         </Box>
       </Box>
       <TournamentFooter

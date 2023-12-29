@@ -16,6 +16,8 @@ import Sport from "./assets/images/sport_icon.svg";
 import Mode from "./assets/images/mode_icon.svg";
 import Technology from "./assets/images/tech_icon.svg";
 import Travel from "./assets/images/travel_icon.png";
+import AppService from "./assets/images/app_service.png";
+import Fashion from "./assets/images/fashion.png";
 
 import GameStop from "./assets/images/game_stop.svg";
 import PSN from "./assets/images/psn.svg";
@@ -197,7 +199,7 @@ const ShopEarnData = [
     top: "35px",
     left: "0",
     bgColor:
-      "linear-gradient(82.05deg, #0098EA 5.49%, #0098EA 48.11%, #53BEFE 96.19%), linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+      "linear-gradient(82deg, #49A1FF 5.49%, #6AB8F9 48.11%, #0B8FFF 96.19%)",
     url: "/",
   },
   {
@@ -206,7 +208,7 @@ const ShopEarnData = [
     top: "41px",
     left: "0",
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(258.65deg, #AA7FF0 1.01%, #7561DB 42.82%, #AA7FF0 89.98%)",
+      "linear-gradient(259deg, #AA7FF0 1.01%, #7561DB 42.82%, #AA7FF0 89.98%)",
     url: "/nft_explain",
   },
   {
@@ -215,7 +217,7 @@ const ShopEarnData = [
     top: "36px",
     left: "0",
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(81.99deg, #4664FF 5.48%, #6D74FB 60.94%, #3875EA 108.65%)",
+      "linear-gradient(82deg, #4664FF 5.48%, #6D74FB 60.94%, #3875EA 108.65%)",
     url: "/",
   },
   {
@@ -224,7 +226,7 @@ const ShopEarnData = [
     top: "40px",
     left: "0",
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(73.21deg, #13A199 -1.42%, #1DBCB3 48.23%, #21D9D9 100.86%)",
+      "linear-gradient(73deg, #13A199 -1.42%, #1DBCB3 48.23%, #21D9D9 100.86%)",
     url: "/",
   },
   {
@@ -233,7 +235,7 @@ const ShopEarnData = [
     top: "31px",
     left: "0",
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(76.96deg, #ECC75F -4.06%, #FFA68A 47.73%, #FFBE85 93.04%)",
+      "linear-gradient(77deg, #ECC75F -4.06%, #FFA68A 47.73%, #FFBE85 93.04%)",
     url: "/",
   },
   {
@@ -242,7 +244,7 @@ const ShopEarnData = [
     top: "37px",
     left: "0",
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(248.16deg, #EEACCD 17.14%, #DF77A9 58.26%, #FFC3E0 101.85%)",
+      "linear-gradient(248deg, #EEACCD 17.14%, #DF77A9 58.26%, #FFC3E0 101.85%)",
     url: "/",
   },
   {
@@ -251,7 +253,25 @@ const ShopEarnData = [
     top: "50px",
     left: "0",
     bgColor:
-      "linear-gradient(67.71deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%), linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+      "linear-gradient(68deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%)",
+    url: "/",
+  },
+  {
+    title: "App & Services",
+    icon: AppService,
+    top: "19px",
+    left: "0",
+    bgColor:
+      "linear-gradient(268deg, #E46D6D 0.26%, #DE4E4E 42.67%, #FFA26D 91.56%)",
+    url: "/",
+  },
+  {
+    title: "Fashion",
+    icon: Fashion,
+    top: "19px",
+    left: "0",
+    bgColor:
+      "linear-gradient(254deg, #A7F7B4 18.9%, #67DE7A 56.86%, #78C885 97.11%)",
     url: "/",
   },
 ];

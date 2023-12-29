@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setFooterState } from "../features/footer/footer";
 import { Box, useTheme, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import MenuIcon from "../assets/images/menu_icon.svg";
@@ -7,6 +9,12 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 const Navbar = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleBackEvent = () => {
+    navigate("/")
+    dispatch(setFooterState(1));
+  }
   return (
     <React.Fragment>
       <Box
@@ -28,7 +36,7 @@ const Navbar = () => {
             fontWeight: theme.fontWeight.thin,
             cursor: "pointer",
           }}
-          onClick={() => navigate("/")}
+          onClick={handleBackEvent}
         >
           <ArrowBackIosIcon
             sx={{

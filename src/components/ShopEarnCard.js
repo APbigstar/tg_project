@@ -62,7 +62,12 @@ const ShopEarnCard = (props) => {
         />
         <img
           src={props.icon}
-          style={{ position: "absolute", top: props.top, left: props.left }}
+          style={{
+            position: "absolute",
+            top: props.top,
+            left: props.left,
+            width: props.title === "Fashion" ? "65px" : "auto",
+          }}
           alt="Main Icon"
         />
         <p

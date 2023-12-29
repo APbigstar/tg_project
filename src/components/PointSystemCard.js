@@ -13,14 +13,15 @@ import ArrowRight from "../assets/images/rightArrow.svg";
 const PointSystemCard = (props) => {
   const theme = useTheme();
   const navigate = useNavigate();
-  const handleMoveRight = () => {
+  const handleClickEvent = (url) => {
     props.setMoveRightState(!props.currentMoveRightState);
-  };
+    navigate(url);
+  }
   return (
     <React.Fragment>
       <Box
         sx={{ width: "100%", cursor: "pointer" }}
-        onClick={() => navigate(props.redirectUrl)}
+        onClick={() => handleClickEvent(props.redirectUrl)}
       >
         <Box
           sx={{
@@ -150,8 +151,7 @@ const PointSystemCard = (props) => {
           </Box>
           <Box
             sx={{
-              maxWidth:
-                props.text === "Watch a video Available" ? "90px" : "89px",
+              width: "97px",
               marginBottom: "37px",
             }}
           >
@@ -176,7 +176,6 @@ const PointSystemCard = (props) => {
               position: "relative",
             }}
           >
-            {console.log(props.text === "Redeem with Merchants")}
             <img
               style={{
                 position: "absolute",
@@ -205,7 +204,6 @@ const PointSystemCard = (props) => {
                 width: "100%",
                 cursor: "pointer",
               }}
-              onClick={handleMoveRight}
             >
               <p
                 style={{

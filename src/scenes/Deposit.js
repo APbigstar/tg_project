@@ -7,8 +7,8 @@ import DepositCurrencyCard from "../components/DepositCurrencyCard";
 
 import GameController from "../assets/images/game_controller.svg";
 import TCoin from "../assets/images/T_coin.svg";
-import TetherCoin from "../assets/images/Tether_coin.svg";
-import EtherCoin from "../assets/images/Ether_coin.svg";
+import TetherCoin from "../assets/images/Tether_coin.png";
+import EtherCoin from "../assets/images/Ether_coin.png";
 import DepositIcon from "../assets/images/deposit.svg";
 import PlayIcon from "../assets/images/uil_play.svg";
 import DropDownIcon from "../assets/images/dropdown_icon.svg";
@@ -56,6 +56,7 @@ const Deposit = () => {
             }}
           >
             <Button
+              className="poppines_font"
               startIcon={<img src={DepositIcon} alt="Deposit Icon" />}
               sx={{
                 borderRadius: "20px",
@@ -300,7 +301,6 @@ const Deposit = () => {
                 paddingLeft: !moveRightState ? "21px" : 0,
                 paddingRight: moveRightState ? "21px" : 0,
                 marginLeft: moveRightState ? "-290px" : "unset",
-                transition: "all 0.7s",
                 marginBottom: "20px",
               }}
             >
