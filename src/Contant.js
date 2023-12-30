@@ -90,7 +90,7 @@ import TetherCoin from "./assets/images/tether_coin_card.png";
 const PointSystems = [
   {
     bgColor:
-      "linear-gradient(82.05deg, #0098EA 5.49%, #0098EA 48.11%, #53BEFE 96.19%),linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+      "linear-gradient(82deg, #0098EA 5.49%, #0098EA 48.11%, #53BEFE 96.19%)",
     amount: "500",
     emptyIconNum: "2",
     fillIconNum: "0",
@@ -103,7 +103,7 @@ const PointSystems = [
   },
   {
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(258.65deg, #AA7FF0 1.01%, #7561DB 42.82%, #AA7FF0 89.98%)",
+      "linear-gradient(259deg, #AA7FF0 1.01%, #7561DB 42.82%, #AA7FF0 89.98%)",
     amount: "8000",
     emptyIconNum: "1",
     fillIconNum: "1",
@@ -116,7 +116,7 @@ const PointSystems = [
   },
   {
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(81.99deg, #4664FF 5.48%, #6D74FB 60.94%, #3875EA 108.65%)",
+      "linear-gradient(82deg, #4664FF 5.48%, #6D74FB 60.94%, #3875EA 108.65%)",
     amount: "5000",
     emptyIconNum: "2",
     fillIconNum: "0",
@@ -129,7 +129,7 @@ const PointSystems = [
   },
   {
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(248.16deg, #EEACCD 17.14%, #DF77A9 58.26%, #FFC3E0 101.85%)",
+      "linear-gradient(248deg, #EEACCD 17.14%, #DF77A9 58.26%, #FFC3E0 101.85%)",
     amount: "10",
     emptyIconNum: "2",
     fillIconNum: "0",
@@ -142,7 +142,7 @@ const PointSystems = [
   },
   {
     bgColor:
-      "linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15)), linear-gradient(76.96deg, #ECC75F -4.06%, #FFA68A 47.73%, #FFBE85 93.04%)",
+      "linear-gradient(77deg, #ECC75F -4.06%, #FFA68A 47.73%, #FFBE85 93.04%)",
     amount: "3000",
     emptyIconNum: "2",
     fillIconNum: "0",
@@ -155,7 +155,7 @@ const PointSystems = [
   },
   {
     bgColor:
-      "linear-gradient(67.71deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%), linear-gradient(0deg, rgba(14, 132, 196, 0.15), rgba(14, 132, 196, 0.15))",
+      "linear-gradient(68deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%)",
     amount: "50",
     emptyIconNum: "2",
     fillIconNum: "0",

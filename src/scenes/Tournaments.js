@@ -1,12 +1,11 @@
 import React from "react";
-import { Box, useTheme, Typography } from "@mui/material";
+import { Box, useTheme, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 import TournamentCard from "../components/TournamentCard";
-
-import MoneyCard from "../components/MoneyCard";
 
 import MoneyNCard from "../assets/images/money_game.png";
 import Moneys from "../assets/images/moneys.png";
@@ -28,6 +27,9 @@ import MoreBtn from "../assets/images/moreBtn.svg";
 import TournamentCardIcon1 from "../assets/images/tournament_card_icon_1.svg";
 import TournamentCardIcon2 from "../assets/images/tournament_card_icon_2.svg";
 import TournamentCardIcon3 from "../assets/images/tournament_card_icon_3.svg";
+import Recommend1 from "../assets/images/recommend_1.png";
+import Recommend2 from "../assets/images/recommend_2.png";
+import Recommend3 from "../assets/images/recommend_3.png";
 
 const Tournaments = () => {
   const theme = useTheme();
@@ -561,7 +563,42 @@ const Tournaments = () => {
         >
           Recommended For You
         </p>
-        <Box></Box>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+          }}
+        >
+          <Box>
+            <img src={Recommend1} alt="Icon" />
+          </Box>
+          <Box sx={{ position: "relative" }}>
+            <img src={Recommend2} alt="Icon" />
+            <Button
+              className="poppines_font"
+              variant="outlined"
+              endIcon={<ArrowForwardIosIcon />}
+              sx={{
+                position: "absolute",
+                padding: "1px 14px 2px 25px",
+                borderRadius: "25px",
+                border: "1px solid #FFF",
+                bottom: "45px",
+                left: "18px",
+                color: "white !important",
+                "&:hover": {
+                  border: "1px solid #FFF",
+                },
+              }}
+            >
+              Play
+            </Button>
+          </Box>
+          <Box>
+            <img src={Recommend3} alt="Icon" />
+          </Box>
+        </Box>
       </Box>
       <Footer />
     </React.Fragment>
