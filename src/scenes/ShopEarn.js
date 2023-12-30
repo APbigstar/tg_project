@@ -370,6 +370,7 @@ const ShopEarn = (props) => {
                   left={item.left}
                   bgColor={item.bgColor}
                   url={item.url}
+                  width={item?.width}
                 />
               ))}
             </Box>

@@ -66,12 +66,7 @@ const ShopEarnCard = (props) => {
             position: "absolute",
             top: props.top,
             left: props.left,
-            width:
-              props.title === "Fashion"
-                ? "65px"
-                : props.title === "Travel"
-                ? "98px"
-                : "auto",
+            width: props?.width,
           }}
           alt="Main Icon"
         />

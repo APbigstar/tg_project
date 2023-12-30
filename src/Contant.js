@@ -10,11 +10,11 @@ import TabResearch from "./assets/images/tabResearch.svg";
 import Theoremeach from "./assets/images/theoremeach.svg";
 import Polish from "./assets/images/polish.svg";
 import GameController from "./assets/images/game_controllers.svg";
-import NFT from "./assets/images/NFT_icon.svg";
-import Ecommerce from "./assets/images/ecommerce_icon.svg";
-import Sport from "./assets/images/sport_icon.svg";
-import Mode from "./assets/images/mode_icon.svg";
-import Technology from "./assets/images/tech_icon.svg";
+import NFT from "./assets/images/NFT_icon.png";
+import Ecommerce from "./assets/images/ecommerce_icon.png";
+import Sport from "./assets/images/sport_icon.png";
+import Mode from "./assets/images/mode_icon.png";
+import Technology from "./assets/images/tech_icon.png";
 import Travel from "./assets/images/travel_icon.png";
 import AppService from "./assets/images/app_service.png";
 import Fashion from "./assets/images/fashion.png";
@@ -224,7 +224,8 @@ const ShopEarnData = [
     title: "NFT",
     icon: NFT,
     top: "41px",
-    left: "0",
+    width: "73px",
+    left: "-9px",
     bgColor:
       "linear-gradient(259deg, #AA7FF0 1.01%, #7561DB 42.82%, #AA7FF0 89.98%)",
     url: "/nft_explain",
@@ -233,7 +234,8 @@ const ShopEarnData = [
     title: "E-commerce",
     icon: Ecommerce,
     top: "36px",
-    left: "0",
+    width: "91px",
+    left: "-20px",
     bgColor:
       "linear-gradient(82deg, #4664FF 5.48%, #6D74FB 60.94%, #3875EA 108.65%)",
     url: "/",
@@ -242,7 +244,8 @@ const ShopEarnData = [
     title: "Sport",
     icon: Sport,
     top: "40px",
-    left: "0",
+    left: "-18px",
+    width: "87px",
     bgColor:
       "linear-gradient(73deg, #13A199 -1.42%, #1DBCB3 48.23%, #21D9D9 100.86%)",
     url: "/",
@@ -251,7 +254,8 @@ const ShopEarnData = [
     title: "Mode",
     icon: Mode,
     top: "31px",
-    left: "0",
+    left: "-35px",
+    width: "108px",
     bgColor:
       "linear-gradient(77deg, #ECC75F -4.06%, #FFA68A 47.73%, #FFBE85 93.04%)",
     url: "/",
@@ -260,7 +264,8 @@ const ShopEarnData = [
     title: "Technology",
     icon: Technology,
     top: "37px",
-    left: "0",
+    left: "-13px",
+    width: "78px",
     bgColor:
       "linear-gradient(248deg, #EEACCD 17.14%, #DF77A9 58.26%, #FFC3E0 101.85%)",
     url: "/",
@@ -270,6 +275,7 @@ const ShopEarnData = [
     icon: Travel,
     top: "50px",
     left: "-30px",
+    width: "98px",
     bgColor:
       "linear-gradient(68deg, #0856FD -5.17%, #199CFF 39.15%, #41E6EF 90.21%)",
     url: "/",
@@ -288,6 +294,7 @@ const ShopEarnData = [
     icon: Fashion,
     top: "39px",
     left: "0",
+    width: "65px",
     bgColor:
       "linear-gradient(254deg, #A7F7B4 18.9%, #67DE7A 56.86%, #78C885 97.11%)",
     url: "/",
