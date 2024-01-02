@@ -36,7 +36,7 @@ import BDailyChallengeCard from "../assets/images/b_daily_challenge_card_1.svg";
 import BlueCardIcon from "../assets/images/daily_blue_challenge_card_icon.svg";
 import YelloCardIcon from "../assets/images/daily_yellow_challenge_card_icon.svg";
 
-import { DailyData, DailyChallengeData } from "../Contant";
+import { DailyData, DailyChallengeData } from "../Constant";
 import { FortTwoTone } from "@mui/icons-material";
 
 const MyProfile = () => {

@@ -45,7 +45,7 @@ import MoreBtn from "../assets/images/moreBtn.svg";
 import BSquare from "../assets/images/BigSquare.svg";
 import SSquare from "../assets/images/SmSquare.svg";
 
-import { rankingData, recordData } from "../Contant";
+import { rankingData, recordData } from "../Constant";
 import RankingCard from "../components/RankingCard";
 
 const TournamentsDetail = () => {

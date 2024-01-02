@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Surveys from "../assets/images/Surveys.svg";
 import Coins from "../assets/images/coins.png";
 import GameController from "../assets/images/gameController.svg";
-import { SurveyData } from "../Contant";
+import { SurveyData } from "../Constant";
 import SurveyCard from "../components/SurveyCard";
 
 const AnswerSurvey = () => {

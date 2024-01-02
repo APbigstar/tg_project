@@ -16,7 +16,7 @@ import BSquare from "../assets/images/BigSquare.svg";
 
 import ShopEarnCard from "../components/ShopEarnCard";
 import ShopEarnGift from "../components/ShopEarnGift";
-import { ShopEarnData, ShopEarnGiftData } from "../Contant";
+import { ShopEarnData, ShopEarnGiftData } from "../Constant";
 
 const ShopEarn = (props) => {
   const theme = useTheme();

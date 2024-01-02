@@ -32,7 +32,7 @@ import Extra from "../assets/images/Extra_2.svg";
 import Star from "../assets/images/star.svg";
 import Tournaments from "../assets/images/tournaments.svg";
 
-import { PointSystems } from "../Contant";
+import { PointSystems } from "../Constant";
 
 const Home = () => {
   const theme = useTheme();

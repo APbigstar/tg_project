@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import MoneyCard from "../components/MoneyCard";
 import NFTCard from "../components/NFTCard";
 
-import { NFTData } from "../Contant";
+import { NFTData } from "../Constant";
 
 import MoneyCardIcon from "../assets/images/money_card_icon.svg";
 import BCrawn from "../assets/images/b_crawn.svg";
