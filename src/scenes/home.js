@@ -540,11 +540,7 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard
-              icon={FGame}
-              amount="0/196"
-              url="http://51.20.34.211/TG_Games/TG-HexaPuzzle/"
-            >
+            <GameCard icon={FGame} amount="0/196" url="#">
               <p
                 style={{
                   color: theme.palette.black[0],
@@ -584,11 +580,7 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard
-              icon={SGame}
-              amount="0/196"
-              url="http://51.20.34.211/TG_Games/TG-FarmLink/"
-            >
+            <GameCard icon={SGame} amount="0/196" url="#">
               <p
                 style={{
                   color: theme.palette.black[0],
@@ -628,11 +620,7 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard
-              icon={TGame}
-              amount="0/196"
-              url="http://51.20.34.211/TG_Games/TG-DuckyDuckie/"
-            >
+            <GameCard icon={TGame} amount="0/196" url="#">
               <p
                 style={{
                   color: theme.palette.black[0],
@@ -672,11 +660,7 @@ const Home = () => {
               marginBottom: "12px",
             }}
           >
-            <GameCard
-              icon={FOGame}
-              amount="0/196"
-              url="http://51.20.34.211/TG_Games/TG-HoppyStacky/"
-            >
+            <GameCard icon={FOGame} amount="0/196" url="#">
               <p
                 style={{
                   color: theme.palette.black[0],
