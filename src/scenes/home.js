@@ -25,6 +25,7 @@ import FGame from "../assets/images/hexa.png";
 import SGame from "../assets/images/farm.png";
 import TGame from "../assets/images/ducky.png";
 import FOGame from "../assets/images/hoppy.png";
+import TapTap from "../assets/images/taptap.png";
 import FFGame from "../assets/images/fifth_game.svg";
 import SSGame from "../assets/images/sixth_game.svg";
 import Lock from "../assets/images/Lock.svg";
@@ -539,6 +540,50 @@ const Home = () => {
           Games
         </h3>
         <Box>
+          <Box
+            sx={{
+              padding: "6px 9px 9px 11px",
+              background: "#F7F9FB",
+              borderRadius: "8px",
+              marginBottom: "12px",
+            }}
+          >
+            <GameCard
+              icon={TapTap}
+              amount="0/196"
+              url="https://www.gamearter.com/game/tg-taptap/"
+            >
+              <p
+                style={{
+                  color: theme.palette.black[0],
+                  fontSize: "13px",
+                  maxWidth: "170px",
+                  fontWeight: theme.fontWeight.medium,
+                }}
+              >
+                TapTap <br />{" "}
+                <span
+                  style={{
+                    fontSize: theme.fontSize.medium,
+                    fontWeight: theme.fontWeight.bold,
+                  }}
+                >
+                  {" "}
+                  Score{" "}
+                  <span
+                    style={{
+                      color: "#3CA1FE",
+                      fontWeight: theme.fontWeight.bold,
+                    }}
+                  >
+                    {" "}
+                    500{" "}
+                  </span>
+                  points!
+                </span>
+              </p>
+            </GameCard>
+          </Box>
           <Box
             sx={{
               padding: "6px 9px 9px 11px",
