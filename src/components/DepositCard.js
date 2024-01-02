@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Box, Hidden, useTheme } from "@mui/material";
 
 const DepositCard = (props) => {
-  const handleMoveRight = () => {
-    props.setMoveRightState(!props.currentMoveRightState);
-  };
   return (
     <React.Fragment>
-      <Box sx={{ width: "100%", cursor: "pointer" }} onClick={handleMoveRight}>
+      <Box sx={{ width: "100%", cursor: "pointer" }}>
         <Box
           sx={{
             width: "145px",

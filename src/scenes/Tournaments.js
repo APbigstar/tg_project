@@ -33,7 +33,6 @@ import Recommend3 from "../assets/images/recommend_3.png";
 
 const Tournaments = () => {
   const theme = useTheme();
-  const [moveRightState, setMoveRightState] = React.useState(false);
   const navigate = useNavigate();
 
   return (
@@ -41,7 +40,7 @@ const Tournaments = () => {
       <Navbar />
       <Box
         sx={{
-          padding: "10px 57px",
+          py: "10px",
           background: "linear-gradient(90deg, #458CFE 0%, #7DD8FD 100%)",
           marginBottom: "48px",
         }}
@@ -305,7 +304,6 @@ const Tournaments = () => {
           width: "100%",
           background: "rgba(247, 249, 251, 1)",
           paddingTop: "12px",
-          paddingBottom: "23px",
           overflow: "hidden",
           marginBottom: "18px",
         }}
@@ -326,49 +324,28 @@ const Tournaments = () => {
             display: "flex",
             alignItems: "center",
             gap: theme.gaps[0],
-            width: "770.73px",
-            paddingLeft: !moveRightState ? "21px" : 0,
-            marginLeft: moveRightState ? "-406px" : "unset",
+            px: "21px",
+            overflowY: "hidden",
+            overflowX: "auto",
+            scrollbarWidth: "thin",
+            scrollbarColor: "transparent transparent",
+            msOverflowStyle: "none",
             transition: "all 0.7s",
-            marginBottom: "18px",
+            "&::-webkit-scrollbar": {
+              width: 4,
+            },
+
+            "&::-webkit-scrollbar-thumb": {
+              background: "transparent",
+            },
           }}
         >
-          <img
-            src={TImg1}
-            alt="T Image"
-            style={{ cursor: "pointer" }}
-            onClick={() => setMoveRightState(!moveRightState)}
-          />
-          <img
-            src={TImg2}
-            alt="T Image"
-            style={{ cursor: "pointer" }}
-            onClick={() => setMoveRightState(!moveRightState)}
-          />
-          <img
-            src={TImg3}
-            alt="T Image"
-            style={{ cursor: "pointer" }}
-            onClick={() => setMoveRightState(!moveRightState)}
-          />
-          <img
-            src={TImg1}
-            alt="T Image"
-            style={{ cursor: "pointer" }}
-            onClick={() => setMoveRightState(!moveRightState)}
-          />
-          <img
-            src={TImg2}
-            alt="T Image"
-            style={{ cursor: "pointer" }}
-            onClick={() => setMoveRightState(!moveRightState)}
-          />
-          <img
-            src={TImg3}
-            alt="T Image"
-            style={{ cursor: "pointer" }}
-            onClick={() => setMoveRightState(!moveRightState)}
-          />
+          <img src={TImg1} alt="T Image" style={{ cursor: "pointer" }} />
+          <img src={TImg2} alt="T Image" style={{ cursor: "pointer" }} />
+          <img src={TImg3} alt="T Image" style={{ cursor: "pointer" }} />
+          <img src={TImg1} alt="T Image" style={{ cursor: "pointer" }} />
+          <img src={TImg2} alt="T Image" style={{ cursor: "pointer" }} />
+          <img src={TImg3} alt="T Image" style={{ cursor: "pointer" }} />
         </Box>
       </Box>
 

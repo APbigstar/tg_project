@@ -12,9 +12,9 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   const handleBackEvent = () => {
-    navigate("/")
+    navigate("/");
     dispatch(setFooterState(1));
-  }
+  };
   return (
     <React.Fragment>
       <Box
@@ -46,7 +46,7 @@ const Navbar = () => {
           />
           {"Back"}
         </Typography>
-        <Box>
+        {/* <Box>
           <Typography
             variant="h5"
             gutterBottom
@@ -70,7 +70,7 @@ const Navbar = () => {
             Bot
           </Typography>
         </Box>
-        <img src={MenuIcon} alt="Menu Icon" />
+        <img src={MenuIcon} alt="Menu Icon" /> */}
       </Box>
     </React.Fragment>
   );

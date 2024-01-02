@@ -14,7 +14,6 @@ const PointSystemCard = (props) => {
   const theme = useTheme();
   const navigate = useNavigate();
   const handleClickEvent = (url) => {
-    props.setMoveRightState(!props.currentMoveRightState);
     navigate(url);
   };
   return (

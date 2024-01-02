@@ -38,8 +38,6 @@ const Home = () => {
   const theme = useTheme();
   const navigate = useNavigate();
 
-  const [moveRightState, setMoveRightState] = useState(false);
-
   return (
     <React.Fragment>
       <Navbar />
@@ -213,17 +211,26 @@ const Home = () => {
             display: "flex",
             alignItems: "center",
             gap: theme.gaps[0],
-            width: "770.73px",
-            paddingLeft: !moveRightState ? "21px" : 0,
-            marginLeft: moveRightState ? "-406px" : "unset",
+            px: "21px",
+            overflowY: "hidden",
+            overflowX: "auto",
+            scrollbarWidth: "thin",
+            scrollbarColor: "transparent transparent",
+            msOverflowStyle: "none",
             transition: "all 0.7s",
+
+            "&::-webkit-scrollbar": {
+              width: 4,
+            },
+
+            "&::-webkit-scrollbar-thumb": {
+              background: "transparent",
+            },
           }}
         >
           {PointSystems.map((item, index) => (
             <PointSystemCard
               key={index}
-              setMoveRightState={setMoveRightState}
-              currentMoveRightState={moveRightState}
               bgColor={item.bgColor}
               amount={item.amount}
               emptyIconNum={item.emptyIconNum}

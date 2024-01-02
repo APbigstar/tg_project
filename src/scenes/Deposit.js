@@ -296,38 +296,25 @@ const Deposit = () => {
                 display: "flex",
                 alignItems: "center",
                 gap: theme.gaps[0],
-                width: "624px",
-                justifyContent: "center",
-                paddingLeft: !moveRightState ? "21px" : 0,
-                paddingRight: moveRightState ? "21px" : 0,
-                marginLeft: moveRightState ? "-290px" : "unset",
+                px: "21px",
+                overflowY: "hidden",
+                overflowX: "auto",
+                scrollbarWidth: "thin",
+                scrollbarColor: "transparent transparent",
+                msOverflowStyle: "none",
                 marginBottom: "20px",
+                "&::-webkit-scrollbar": {
+                  width: 4,
+                },
+                "&::-webkit-scrollbar-thumb": {
+                  background: "transparent",
+                },
               }}
             >
-              <DepositCard
-                currentMoveRightState={moveRightState}
-                setMoveRightState={setMoveRightState}
-                text="@CryptoBot"
-                icon={CryptoBot}
-              />
-              <DepositCard
-                currentMoveRightState={moveRightState}
-                setMoveRightState={setMoveRightState}
-                text="Tonkeeper"
-                icon={Tonkeeper}
-              />
-              <DepositCard
-                currentMoveRightState={moveRightState}
-                setMoveRightState={setMoveRightState}
-                text="Tonhub"
-                icon={Tonhub}
-              />
-              <DepositCard
-                currentMoveRightState={moveRightState}
-                setMoveRightState={setMoveRightState}
-                text="QR Code"
-                icon={QR}
-              />
+              <DepositCard text="@CryptoBot" icon={CryptoBot} />
+              <DepositCard text="Tonkeeper" icon={Tonkeeper} />
+              <DepositCard text="Tonhub" icon={Tonhub} />
+              <DepositCard text="QR Code" icon={QR} />
             </Box>
             <Box
               sx={{
