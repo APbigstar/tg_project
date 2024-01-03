@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 const GameCard = (props) => {
   const theme = useTheme();
-  const navigate = useNavigate();
   return (
     <React.Fragment>
       <Box
@@ -48,7 +47,7 @@ const GameCard = (props) => {
               fontWeight: "600",
               textTransform: "capitalize",
             }}
-            onClick={() => window.location.assign(props.url)}
+            onClick={() => props.setGameState(true, props.url)}
           >
             Play
           </Button>

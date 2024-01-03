@@ -19,7 +19,7 @@ const PointSystemCard = (props) => {
   return (
     <React.Fragment>
       <Box
-        sx={{ width: "100%", cursor: "pointer" }}
+        sx={{ width: "119px", cursor: "pointer" }}
         onClick={() => handleClickEvent(props.redirectUrl)}
       >
         <Box
