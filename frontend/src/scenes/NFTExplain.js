@@ -3,6 +3,8 @@ import { Box, useTheme, Button } from "@mui/material";
 import Navbar from "../components/Navbar";
 import MoneyCard from "../components/MoneyCard";
 import NFTCard from "../components/NFTCard";
+import { useSelector, useDispatch } from "react-redux";
+import { setBackState } from "../features/navbar/back";
 
 import { NFTData } from "../Constant";
 
@@ -13,6 +15,12 @@ import BHCrawn from "../assets/images/b_half_crawn.svg";
 const NFTExplain = () => {
   const theme = useTheme();
   const [explainPage, setExplainPage] = React.useState(0);
+  const dispatch = useDispatch();
+
+  const handleNavigate = (value) => {
+    setExplainPage(value);
+    dispatch(setBackState("/shop_earn_deals"));
+  };
 
   return (
     <React.Fragment>
@@ -56,7 +64,7 @@ const NFTExplain = () => {
                 title={item.title}
                 amount={item.amount}
                 url={item.url}
-                func={setExplainPage}
+                func={handleNavigate}
                 index={item.index}
               />
             ))}

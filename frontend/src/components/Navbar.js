@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setFooterState } from "../features/footer/footer";
+import { setBackState } from "../features/navbar/back";
 import { setGameState } from "../features/game/game";
 import { Box, useTheme, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,13 +12,15 @@ import GameController from "../assets/images/game_controller.svg";
 const Navbar = (props) => {
   const theme = useTheme();
   const currentGameState = useSelector((state) => state.gameState.value);
+  const currentUrl = useSelector((state) => state.backState.value);
+  const currentFooterNumber = useSelector((state) => state.footerState.value);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleBackEvent = () => {
-    navigate("/");
-    dispatch(setFooterState(1));
+    navigate(currentUrl);
+    dispatch(setFooterState(currentFooterNumber));
     dispatch(setGameState(false));
   };
   return (

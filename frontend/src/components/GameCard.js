@@ -32,7 +32,12 @@ const GameCard = (props) => {
             <img
               src={props.icon}
               alt="Icon"
-              style={{ marginRight: "12px", borderRadius: "16px" }}
+              style={{
+                marginRight: "12px",
+                borderRadius: "16px",
+                width: "60px",
+                height: "60px",
+              }}
             />
             <Box>{props.children}</Box>
           </Box>

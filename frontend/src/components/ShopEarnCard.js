@@ -1,5 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setBackState } from "../features/navbar/back";
 import { Box } from "@mui/material";
 import ArrowRight from "../assets/images/rightArrow.svg";
 import SSquare from "../assets/images/SmSquare.svg";
@@ -7,6 +9,25 @@ import BSquare from "../assets/images/BigSquare.svg";
 
 const ShopEarnCard = (props) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleNavigate = () => {
+    const currentUrl =
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    dispatch(
+      setBackState(
+        currentUrl == "" ||
+          currentUrl == " " ||
+          currentUrl == "undefined" ||
+          currentUrl == null
+          ? "/"
+          : "/" + currentUrl
+      )
+    );
+    navigate(props.url);
+  };
   return (
     <React.Fragment>
       <Box
@@ -18,7 +39,7 @@ const ShopEarnCard = (props) => {
           overflow: "hidden",
           cursor: "pointer",
         }}
-        onClick={() => navigate(props.url)}
+        onClick={handleNavigate}
       >
         <img
           style={{

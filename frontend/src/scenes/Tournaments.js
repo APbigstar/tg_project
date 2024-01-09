@@ -2,6 +2,8 @@ import React from "react";
 import { Box, useTheme, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { useSelector, useDispatch } from "react-redux";
+import { setBackState } from "../features/navbar/back";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -34,6 +36,24 @@ import Recommend3 from "../assets/images/recommend_3.png";
 const Tournaments = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleNavigate = () => {
+    const currentUrl =
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    dispatch(
+      setBackState(
+        currentUrl == "" ||
+          currentUrl == " " ||
+          currentUrl == "undefined" ||
+          currentUrl == null
+          ? "/"
+          : "/" + currentUrl
+      )
+    );
+    navigate("/tournaments_detail");
+  };
 
   return (
     <React.Fragment>
@@ -429,7 +449,7 @@ const Tournaments = () => {
                 zIndex: 4,
                 cursor: "pointer",
               }}
-              onClick={() => navigate("/tournaments_detail")}
+              onClick={handleNavigate}
             />
             <Box>
               <Box

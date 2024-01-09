@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Box, Hidden, useTheme } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setBackState } from "../features/navbar/back";
 
 import CrownIcon from "../assets/images/Crown.svg";
 import WhiteCrown from "../assets/images/HalfCrownWhite.svg";
@@ -11,9 +13,25 @@ import BSquare from "../assets/images/BigSquare.svg";
 import ArrowRight from "../assets/images/rightArrow.svg";
 
 const PointSystemCard = (props) => {
+  const currentFooter = useSelector((state) => state.backState.value);
+  const dispatch = useDispatch();
   const theme = useTheme();
   const navigate = useNavigate();
   const handleClickEvent = (url) => {
+    const currentUrl =
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    dispatch(
+      setBackState(
+        currentUrl == "" ||
+          currentUrl == " " ||
+          currentUrl == "undefined" ||
+          currentUrl == null
+          ? "/"
+          : "/" + currentUrl
+      )
+    );
     navigate(url);
   };
   return (

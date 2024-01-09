@@ -1,6 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, useTheme, Button } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
+import { setBackState } from "../features/navbar/back";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import DailyChecker from "../components/DailyChecker";
@@ -42,6 +45,25 @@ import { FortTwoTone } from "@mui/icons-material";
 const MyProfile = () => {
   const theme = useTheme();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleNavigate = (url) => {
+    const currentUrl =
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    dispatch(
+      setBackState(
+        currentUrl == "" ||
+          currentUrl == " " ||
+          currentUrl == "undefined" ||
+          currentUrl == null
+          ? "/"
+          : "/" + currentUrl
+      )
+    );
+    navigate(url);
+  };
 
   return (
     <React.Fragment>
@@ -103,7 +125,7 @@ const MyProfile = () => {
                 cursor: "pointer",
               }}
               alt="Pen Icon"
-              onClick={() => navigate("/edit_profile")}
+              onClick={() => handleNavigate("/edit_profile")}
             />
           </Box>
         </Box>
@@ -459,7 +481,7 @@ const MyProfile = () => {
                   width: "50%",
                   textTransform: "capitalize",
                 }}
-                onClick={() => navigate("/deposit")}
+                onClick={() => handleNavigate("/deposit")}
               >
                 Deposit
               </Button>

@@ -4,6 +4,7 @@ import { Box, useTheme, Button, Typography } from "@mui/material";
 import Iframe from "react-iframe";
 import { useSelector, useDispatch } from "react-redux";
 import { setGameState } from "../features/game/game";
+import { setBackState } from "../features/navbar/back";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -23,17 +24,19 @@ import BSquare from "../assets/images/BigSquare.svg";
 import DSurveyIcon from "../assets/images/DSurveyIcon.svg";
 import DViewRewardIcon from "../assets/images/DViewRewardIcon.png";
 import DPlaytimeIcon from "../assets/images/DPlaytimeIcon.svg";
-import FGame from "../assets/images/hexa.png";
-import SGame from "../assets/images/farm.png";
-import TGame from "../assets/images/ducky.png";
-import FOGame from "../assets/images/hoppy.png";
-import TapTap from "../assets/images/taptap.png";
-import FFGame from "../assets/images/fifth_game.svg";
-import SSGame from "../assets/images/sixth_game.svg";
 import Lock from "../assets/images/Lock.svg";
 import Extra from "../assets/images/Extra_2.svg";
 import Star from "../assets/images/star.svg";
 import Tournaments from "../assets/images/tournaments.svg";
+
+import Epic from "../assets/images/epic.png";
+import Hoppy from "../assets/images/hoppy.png";
+import Flap from "../assets/images/flap.png";
+import Farm from "../assets/images/farm.png";
+import DuckDuckie from "../assets/images/DuckDuckie.png";
+import HexaPuzzle from "../assets/images/HexaPuzzle.png";
+import TapTap from "../assets/images/taptap.png";
+import MineCraft from "../assets/images/MineCraft.jpg";
 
 import { PointSystems } from "../Constant";
 
@@ -49,6 +52,24 @@ const Home = () => {
       setIframeUrl(url);
     }
     dispatch(setGameState(value));
+  };
+
+  const handleNavigate = () => {
+    const currentUrl =
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    dispatch(
+      setBackState(
+        currentUrl == "" ||
+          currentUrl == " " ||
+          currentUrl == "undefined" ||
+          currentUrl == null
+          ? "/"
+          : "/" + currentUrl
+      )
+    );
+    navigate("/levels");
   };
 
   return (
@@ -575,10 +596,328 @@ const Home = () => {
                 }}
               >
                 <GameCard
+                  icon={Epic}
+                  amount="0/196"
+                  url="https://s3.amazonaws.com/tg-games.com/epic-roll-online/index.html"
+                  setGameState={handleSetGameState}
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      maxWidth: "170px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    Epic Roll
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
+                  icon={Flap}
+                  amount="0/196"
+                  setGameState={handleSetGameState}
+                  url="https://s3.amazonaws.com/tg-games.com/flap-up-online/index.html"
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      maxWidth: "170px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    Flap Up
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
+                  icon={MineCraft}
+                  amount="0/196"
+                  setGameState={handleSetGameState}
+                  url="https://s3.amazonaws.com/tg-games.com/MineCraft-Endless-runner/index.html"
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      maxWidth: "170px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    MineCraft Endless Runner
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
+                  icon={Hoppy}
+                  amount="0/196"
+                  setGameState={handleSetGameState}
+                  url="https://s3.amazonaws.com/tg-games.com/hoppy-stack/index.html"
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      maxWidth: "170px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    Hoppy Stack
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
+                  icon={Farm}
+                  amount="0/196"
+                  setGameState={handleSetGameState}
+                  url="https://s3.amazonaws.com/tg-games.com/farmlink/index.html"
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    Farm Link
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
+                  icon={DuckDuckie}
+                  amount="0/196"
+                  url="https://s3.amazonaws.com/tg-games.com/duckyduckie/index.html"
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      maxWidth: "170px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    DuckDuckie
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
+                  icon={HexaPuzzle}
+                  amount="0/196"
+                  url="https://s3.amazonaws.com/tg-games.com/hexapuzzle/index.html"
+                >
+                  <p
+                    style={{
+                      color: theme.palette.black[0],
+                      fontSize: "13px",
+                      maxWidth: "170px",
+                      fontWeight: theme.fontWeight.medium,
+                    }}
+                  >
+                    HexaPuzzle
+                    <br />{" "}
+                    <span
+                      style={{
+                        fontSize: theme.fontSize.medium,
+                        fontWeight: theme.fontWeight.bold,
+                      }}
+                    >
+                      {" "}
+                      Score{" "}
+                      <span
+                        style={{
+                          color: "#3CA1FE",
+                          fontWeight: theme.fontWeight.bold,
+                        }}
+                      >
+                        {" "}
+                        500{" "}
+                      </span>
+                      points!
+                    </span>
+                  </p>
+                </GameCard>
+              </Box>
+              <Box
+                sx={{
+                  padding: "6px 9px 9px 11px",
+                  background: "#F7F9FB",
+                  borderRadius: "8px",
+                  marginBottom: "12px",
+                }}
+              >
+                <GameCard
                   icon={TapTap}
                   amount="0/196"
-                  url="https://www.gamearter.com/game/tg-taptap/"
-                  setGameState={handleSetGameState}
+                  url="https://s3.amazonaws.com/tg-games.com/taptap-online/index.html"
                 >
                   <p
                     style={{
@@ -588,262 +927,8 @@ const Home = () => {
                       fontWeight: theme.fontWeight.medium,
                     }}
                   >
-                    TapTap <br />{" "}
-                    <span
-                      style={{
-                        fontSize: theme.fontSize.medium,
-                        fontWeight: theme.fontWeight.bold,
-                      }}
-                    >
-                      {" "}
-                      Score{" "}
-                      <span
-                        style={{
-                          color: "#3CA1FE",
-                          fontWeight: theme.fontWeight.bold,
-                        }}
-                      >
-                        {" "}
-                        500{" "}
-                      </span>
-                      points!
-                    </span>
-                  </p>
-                </GameCard>
-              </Box>
-              <Box
-                sx={{
-                  padding: "6px 9px 9px 11px",
-                  background: "#F7F9FB",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                }}
-              >
-                <GameCard
-                  icon={FGame}
-                  amount="0/196"
-                  setGameState={handleSetGameState}
-                >
-                  <p
-                    style={{
-                      color: theme.palette.black[0],
-                      fontSize: "13px",
-                      maxWidth: "170px",
-                      fontWeight: theme.fontWeight.medium,
-                    }}
-                  >
-                    Dominoes Cash <br />{" "}
-                    <span
-                      style={{
-                        fontSize: theme.fontSize.medium,
-                        fontWeight: theme.fontWeight.bold,
-                      }}
-                    >
-                      {" "}
-                      Score{" "}
-                      <span
-                        style={{
-                          color: "#3CA1FE",
-                          fontWeight: theme.fontWeight.bold,
-                        }}
-                      >
-                        {" "}
-                        500{" "}
-                      </span>
-                      points!
-                    </span>
-                  </p>
-                </GameCard>
-              </Box>
-              <Box
-                sx={{
-                  padding: "6px 9px 9px 11px",
-                  background: "#F7F9FB",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                }}
-              >
-                <GameCard
-                  icon={SGame}
-                  amount="0/196"
-                  setGameState={handleSetGameState}
-                >
-                  <p
-                    style={{
-                      color: theme.palette.black[0],
-                      fontSize: "13px",
-                      maxWidth: "170px",
-                      fontWeight: theme.fontWeight.medium,
-                    }}
-                  >
-                    Paws: Connect Puzzle <br />{" "}
-                    <span
-                      style={{
-                        fontSize: theme.fontSize.medium,
-                        fontWeight: theme.fontWeight.bold,
-                      }}
-                    >
-                      {" "}
-                      Score{" "}
-                      <span
-                        style={{
-                          color: "#3CA1FE",
-                          fontWeight: theme.fontWeight.bold,
-                        }}
-                      >
-                        {" "}
-                        500{" "}
-                      </span>
-                      points!
-                    </span>
-                  </p>
-                </GameCard>
-              </Box>
-              <Box
-                sx={{
-                  padding: "6px 9px 9px 11px",
-                  background: "#F7F9FB",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                }}
-              >
-                <GameCard
-                  icon={TGame}
-                  amount="0/196"
-                  setGameState={handleSetGameState}
-                >
-                  <p
-                    style={{
-                      color: theme.palette.black[0],
-                      fontSize: "13px",
-                      maxWidth: "170px",
-                      fontWeight: theme.fontWeight.medium,
-                    }}
-                  >
-                    Cooking Cash <br />{" "}
-                    <span
-                      style={{
-                        fontSize: theme.fontSize.medium,
-                        fontWeight: theme.fontWeight.bold,
-                      }}
-                    >
-                      {" "}
-                      Score{" "}
-                      <span
-                        style={{
-                          color: "#3CA1FE",
-                          fontWeight: theme.fontWeight.bold,
-                        }}
-                      >
-                        {" "}
-                        500{" "}
-                      </span>
-                      points!
-                    </span>
-                  </p>
-                </GameCard>
-              </Box>
-              <Box
-                sx={{
-                  padding: "6px 9px 9px 11px",
-                  background: "#F7F9FB",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                }}
-              >
-                <GameCard
-                  icon={FOGame}
-                  amount="0/196"
-                  setGameState={handleSetGameState}
-                >
-                  <p
-                    style={{
-                      color: theme.palette.black[0],
-                      fontSize: "13px",
-                      fontWeight: theme.fontWeight.medium,
-                    }}
-                  >
-                    Crazy 8s: Win Real Cash <br />{" "}
-                    <span
-                      style={{
-                        fontSize: theme.fontSize.medium,
-                        fontWeight: theme.fontWeight.bold,
-                      }}
-                    >
-                      {" "}
-                      Score{" "}
-                      <span
-                        style={{
-                          color: "#3CA1FE",
-                          fontWeight: theme.fontWeight.bold,
-                        }}
-                      >
-                        {" "}
-                        500{" "}
-                      </span>
-                      points!
-                    </span>
-                  </p>
-                </GameCard>
-              </Box>
-              <Box
-                sx={{
-                  padding: "6px 9px 9px 11px",
-                  background: "#F7F9FB",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                }}
-              >
-                <GameCard icon={FFGame} amount="0/196">
-                  <p
-                    style={{
-                      color: theme.palette.black[0],
-                      fontSize: "13px",
-                      maxWidth: "170px",
-                      fontWeight: theme.fontWeight.medium,
-                    }}
-                  >
-                    Gin Rummy Cash <br />{" "}
-                    <span
-                      style={{
-                        fontSize: theme.fontSize.medium,
-                        fontWeight: theme.fontWeight.bold,
-                      }}
-                    >
-                      {" "}
-                      Score{" "}
-                      <span
-                        style={{
-                          color: "#3CA1FE",
-                          fontWeight: theme.fontWeight.bold,
-                        }}
-                      >
-                        {" "}
-                        500{" "}
-                      </span>
-                      points!
-                    </span>
-                  </p>
-                </GameCard>
-              </Box>
-              <Box
-                sx={{
-                  padding: "6px 9px 9px 11px",
-                  background: "#F7F9FB",
-                  borderRadius: "8px",
-                  marginBottom: "12px",
-                }}
-              >
-                <GameCard icon={SSGame} amount="0/196">
-                  <p
-                    style={{
-                      color: theme.palette.black[0],
-                      fontSize: "13px",
-                      maxWidth: "170px",
-                      fontWeight: theme.fontWeight.medium,
-                    }}
-                  >
-                    Skip Solitaire <br />{" "}
+                    TapTap
+                    <br />{" "}
                     <span
                       style={{
                         fontSize: theme.fontSize.medium,
@@ -894,7 +979,7 @@ const Home = () => {
                     position: "relative",
                     cursor: "pointer",
                   }}
-                  onClick={() => navigate("/levels")}
+                  onClick={handleNavigate}
                 >
                   <img
                     style={{
@@ -954,7 +1039,7 @@ const Home = () => {
                 >
                   <img
                     style={{ width: "58px" }}
-                    src={FOGame}
+                    src={TapTap}
                     alt="Extra Game"
                   />
                   <img src={Extra} alt="Extra Game" />

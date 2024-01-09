@@ -2,14 +2,11 @@ import React from "react";
 import { Box, useTheme, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 
-import Navbar from "./Navbar";
-
 import MoreBtn from "../assets/images/sm_more_btn.svg";
 import MoneyCardIcon from "../assets/images/money_card_icon.svg";
 
 const NFTCard = (props) => {
   const theme = useTheme();
-  const navigate = useNavigate();
 
   return (
     <React.Fragment>

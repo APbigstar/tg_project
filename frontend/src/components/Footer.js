@@ -3,6 +3,7 @@ import { Box, useTheme, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setFooterState } from "../features/footer/footer";
+import { setBackState } from "../features/navbar/back";
 
 import Footer1 from "../assets/images/footer_1.svg";
 import Footer2 from "../assets/images/footer_2.svg";
@@ -25,6 +26,20 @@ const Footer = () => {
 
   const handleChangeFooter = (num, redirectUrl) => {
     dispatch(setFooterState(num));
+    const currentUrl =
+      window.location.href.split("/")[
+        window.location.href.split("/").length - 1
+      ];
+    dispatch(
+      setBackState(
+        currentUrl == "" ||
+          currentUrl == " " ||
+          currentUrl == "undefined" ||
+          currentUrl == null
+          ? "/"
+          : "/" + currentUrl
+      )
+    );
     navigate(redirectUrl);
   };
   return (
