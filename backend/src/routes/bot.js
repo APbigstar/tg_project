@@ -4,6 +4,6 @@ const { getUserInfo } = require("../controllers/botController");
 
 const router = express.Router();
 
-router.post(`/getUserInfo`, getUserInfo);
+router.get(`/getUserInfo`, getUserInfo);
 
 module.exports = router;

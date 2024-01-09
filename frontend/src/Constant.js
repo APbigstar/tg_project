@@ -87,6 +87,23 @@ import TGCoin from "./assets/images/tg_coin_card.png";
 import USDTCoin from "./assets/images/usdt_coin_card.png";
 import TetherCoin from "./assets/images/tether_coin_card.png";
 
+const LanguageFlags = {
+  en: USAFlag,
+  fr: FranceFlag,
+  zh: ChinaFlag,
+  de: GermanyFlag,
+  ja: JapanFlag,
+  qa: QatarFlag,
+};
+const Countries = {
+  en: "USA",
+  fr: "France",
+  zh: "China",
+  de: "Germany",
+  ja: "Japan",
+  qa: "Qatar",
+};
+
 const PointSystems = [
   {
     bgColor:
@@ -641,4 +658,6 @@ export {
   DailyChallengeData,
   rankingData,
   recordData,
+  LanguageFlags,
+  Countries,
 };

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, useTheme, Button, Typography } from "@mui/material";
+import { Box, useTheme, Button, Typography, Avatar } from "@mui/material";
 import Iframe from "react-iframe";
 import { useSelector, useDispatch } from "react-redux";
 import { setGameState } from "../features/game/game";
 import { setBackState } from "../features/navbar/back";
+import axios from "axios";
 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -38,7 +39,7 @@ import HexaPuzzle from "../assets/images/HexaPuzzle.png";
 import TapTap from "../assets/images/taptap.png";
 import MineCraft from "../assets/images/MineCraft.jpg";
 
-import { PointSystems } from "../Constant";
+import { PointSystems, LanguageFlags, Countries } from "../Constant";
 
 const Home = () => {
   const theme = useTheme();
@@ -46,6 +47,25 @@ const Home = () => {
   const [iframeUrl, setIframeUrl] = React.useState("");
   const currentGameState = useSelector((state) => state.gameState.value);
   const dispatch = useDispatch();
+  const [userName, setUserName] = React.useState("");
+  const [userFlag, setUserFlag] = React.useState("");
+  const [userCountry, setUserCountry] = React.useState("");
+  const [userAvatar, setUserAvatar] = React.useState("");
+
+  useEffect(() => {
+    const userinfo = axios
+      .get(`${process.env.REACT_APP_SERVER_URL}/bot/getUserInfo`)
+      .then((res) => {
+        console.log(res);
+        setUserName(res.data.userName);
+        setUserFlag(LanguageFlags[res.data.language]);
+        setUserCountry(Countries[res.data.language]);
+        setUserAvatar(res.data.avatarUrl);
+      })
+      .catch((error) => {
+        console.error("Error fetching user info:", error);
+      });
+  }, []);
 
   const handleSetGameState = (value, url) => {
     if (value === true) {
@@ -93,7 +113,7 @@ const Home = () => {
                 fontWeight: theme.fontWeight.bold,
               }}
             >
-              Hey John_user, welcome to TG Games!
+              Hey {userName}, welcome to TG Games!
             </p>
           </Box>
           <Box
@@ -153,7 +173,7 @@ const Home = () => {
                     flexShrink: 0,
                     top: "12px",
                     left: "34px",
-                    background: `url(${ProfileIcon}) lightgray 50% / cover no-repeat`,
+                    background: `url(${userAvatar}) lightgray 50% / cover no-repeat`,
                     borderRadius: "50%",
                   }}
                 />
@@ -194,12 +214,12 @@ const Home = () => {
                       lineHeight: "22.5px",
                     }}
                   >
-                    John_user
+                    {userName}
                   </p>
                   <Box
                     sx={{ display: "flex", alignItems: "center", gap: "6px" }}
                   >
-                    <img src={Flag} alt="Flag Image" />
+                    <img src={userFlag} alt="Flag Image" />
                     <p
                       style={{
                         color: "#75757A",
@@ -207,7 +227,7 @@ const Home = () => {
                         fontSize: "11px",
                       }}
                     >
-                      France
+                      {userCountry}
                     </p>
                   </Box>
                 </Box>
